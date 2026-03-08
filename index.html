@@ -509,7 +509,7 @@ bugs.forEach((bug, i) => {
   card.innerHTML = `
     <div class="card-status">
       <span class="status-dot"></span>
-      <span style="opacity:0.4; color:${bug.color}">${card.className.includes('revealed') ? 'REGISTERED' : 'BUG'}</span>
+      <span style="opacity:0.4; color:${bug.color}">${card.className.includes('revealed') ? 'FEATURE' : 'BUG'}</span>
     </div>
     <div class="bug-code">${bug.code}</div>
     <div class="bug-name">${bug.name}</div>
