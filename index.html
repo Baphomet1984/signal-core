@@ -214,18 +214,15 @@
   .bug-card.revealed .bug-desc { display: block; opacity: 0.7; }
 
   .feature-label {
-    display: none;
-    margin-top: 1rem;
-    font-size: 0.65rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--green);
-    padding: 0.3rem 0.6rem;
-    border: 1px solid var(--green);
-    display: inline-block;
-    opacity: 0;
-    transition: opacity 0.5s 0.2s;
-  }
+  background: transparent;
+  cursor: pointer;
+  font-family: 'Space Mono', monospace;
+}
+
+.feature-label:hover {
+  background: var(--green);
+  color: var(--bg);
+}
 
   .bug-card.revealed .feature-label { display: inline-block; opacity: 1; }
 
@@ -514,7 +511,7 @@ bugs.forEach((bug, i) => {
     <div class="bug-code">${bug.code}</div>
     <div class="bug-name">${bug.name}</div>
     <div class="bug-desc">${bug.desc}</div>
-    <div class="feature-label">${bug.feature}</div>
+    <button class="feature-label">${bug.feature}</button>
   `;
 
   card.addEventListener('click', () => {
@@ -522,6 +519,19 @@ bugs.forEach((bug, i) => {
       card.classList.add('revealed');
       card.querySelector('.card-status span:last-child').textContent = 'REGISTERED';
       revealed++;
+      document.addEventListener("click", function(e){
+
+  if(e.target.classList.contains("feature-label")){
+
+    const text = e.target.textContent;
+
+    if(text.includes("aliados")){
+      window.location.href = "/aliados.html";
+    }
+
+  }
+
+});
       document.getElementById('counter').textContent = `${revealed} / 6 bugs revelados`;
       if (revealed === 6) {
         setTimeout(() => {
