@@ -519,7 +519,19 @@ bugs.forEach((bug, i) => {
       card.classList.add('revealed');
       card.querySelector('.card-status span:last-child').textContent = 'REGISTERED';
       revealed++;
-      document.addEventListener("click", function(e){
+     document.getElementById('counter').textContent = `${revealed} / 6 bugs revelados`;
+      if (revealed === 6) {
+        setTimeout(() => {
+          document.querySelector('.footer-quote').style.opacity = '0.7';
+          document.querySelector('.footer-quote').style.transition = 'opacity 1s';
+        }, 400);
+      }
+    }
+  });
+
+  grid.appendChild(card);
+});
+     document.addEventListener("click", function(e){
 
   if(e.target.classList.contains("feature-label")){
 
@@ -531,18 +543,6 @@ bugs.forEach((bug, i) => {
 
   }
 
-});
-      document.getElementById('counter').textContent = `${revealed} / 6 bugs revelados`;
-      if (revealed === 6) {
-        setTimeout(() => {
-          document.querySelector('.footer-quote').style.opacity = '0.7';
-          document.querySelector('.footer-quote').style.transition = 'opacity 1s';
-        }, 400);
-      }
-    }
-  });
-
-  grid.appendChild(card);
 });
 
 // ── CHAOS BUTTON ─────────────────────────────────────────────────
