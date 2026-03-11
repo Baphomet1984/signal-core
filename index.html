@@ -526,17 +526,20 @@ ${bug.feature}
 </button>
 `;
 
-card.addEventListener('click',()=>{
+card.addEventListener("click",(e)=>{
 
-if(!card.classList.contains('revealed')){
+// si el click fue en el botón → no revelar
+if(e.target.classList.contains("feature-label")) return;
 
-card.classList.add('revealed');
+if(!card.classList.contains("revealed")){
 
-card.querySelector('.card-status span:last-child').textContent='REGISTERED';
+card.classList.add("revealed");
+
+card.querySelector(".card-status span:last-child").textContent="REGISTERED";
 
 revealed++;
 
-document.getElementById('counter').textContent=
+document.getElementById("counter").textContent =
 `${revealed} / ${bugs.length} bugs revelados`;
 
 }
