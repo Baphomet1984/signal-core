@@ -527,7 +527,10 @@ card.innerHTML=`
 <div class="bug-name">${bug.name}</div>
 <div class="bug-desc">${bug.desc}</div>
 
-<a class="feature-label" href="${bug.link}" target="_blank">
+<a class="feature-label"
+   href="${bug.link}"
+   target="_blank"
+   rel="noopener noreferrer">
 ${bug.feature}
 </a>
 `;
