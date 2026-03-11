@@ -561,8 +561,55 @@ window.location.href = url;
 }
 
 }
+// ── CHAOS BUTTON ─────────────────────────────────────────────────
+let chaosActive = false;
+const chaosBtn = document.getElementById('chaosBtn');
+const chaosMsg = document.getElementById('chaosMsg');
+const messages = [
+  '// segmentation fault (core dumped)',
+  '// NullPointerException at line 42',
+  '// undefined is not a function',
+  '// maximum call stack exceeded',
+  '// FATAL: unexpected token }',
+  '// cannot read property of undefined',
+];
 
+let chaosTimeout;
+
+chaosBtn.addEventListener('click', () => {
+  chaosActive = !chaosActive;
+  document.body.classList.toggle('chaos', chaosActive);
+  chaosMsg.classList.add('visible');
+  chaosMsg.textContent = messages[Math.floor(Math.random() * messages.length)];
+
+  clearTimeout(chaosTimeout);
+  if (chaosActive) {
+    // auto-reveal a random unrevealed card after 1.5s (bug becomes feature)
+    chaosTimeout = setTimeout(() => {
+      const unrevealed = [...document.querySelectorAll('.bug-card:not(.revealed)')];
+      if (unrevealed.length) {
+        unrevealed[Math.floor(Math.random() * unrevealed.length)].click();
+        chaosMsg.textContent = '// bug accepted... transforming into feature ✓';
+      }
+      document.body.classList.remove('chaos');
+      chaosActive = false;
+      setTimeout(() => chaosMsg.classList.remove('visible'), 2500);
+    }, 1500);
+  } else {
+    setTimeout(() => chaosMsg.classList.remove('visible'), 2000);
+  }
 });
+
+// hover: add micro glitch to canvas particles
+document.querySelectorAll('.bug-card').forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    for (let i = 0; i < 8; i++) {
+      const p = particles[Math.floor(Math.random() * particles.length)];
+      p.speedY = -2;
+      p.opacity = 0.8;
+    }
+  });
+  
 </script>
 </body>
 </html>
