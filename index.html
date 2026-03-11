@@ -541,9 +541,11 @@ bugs.forEach((bug, i) => {
 
   grid.appendChild(card);
 });
-     document.addEventListener("click", function(e){
+document.addEventListener("click", function(e){
 
   if(e.target.classList.contains("feature-label")){
+
+    e.stopPropagation(); // ← ESTO SOLUCIONA EL PROBLEMA
 
     const text = e.target.textContent;
 
@@ -554,7 +556,6 @@ bugs.forEach((bug, i) => {
   }
 
 });
-
 // ── CHAOS BUTTON ─────────────────────────────────────────────────
 let chaosActive = false;
 const chaosBtn = document.getElementById('chaosBtn');
