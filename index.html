@@ -548,19 +548,18 @@ grid.appendChild(card);
 });
 
 // ── REDIRECCIÓN LIMPIA ────────────────────────────────────────────
-document.addEventListener("click",(e)=>{
+const btn = card.querySelector(".feature-label");
 
-if(e.target.classList.contains("feature-label")){
+btn.addEventListener("click", (e) => {
 
 e.stopPropagation();
 
-const url = e.target.dataset.link;
+const url = btn.dataset.link;
 
 if(url && url !== "#"){
 window.location.href = url;
 }
 
-}
 });
 // ── CHAOS BUTTON ─────────────────────────────────────────────────
 let chaosActive = false;
