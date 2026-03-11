@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+dime por que aun no me redircciona al apretar el boton:<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -224,12 +224,7 @@
   color: var(--bg);
 }
 
-  .feature-label{
-  display:none;
-  background: transparent;
-  cursor: pointer;
-  font-family: 'Space Mono', monospace;
-}
+  .bug-card.revealed .feature-label { display: inline-block; opacity: 1; }
 
   .hint {
     font-size: 0.65rem;
@@ -499,6 +494,7 @@ const bugs = [
     desc: 'En solo dos meses ya se reportan 29 fallecimientos y más de 14 mil consultas médicas por síntomas respiratorios.'
   }
 ];
+
 // ── RENDER CARDS ──────────────────────────────────────────────────
 const grid = document.getElementById('grid');
 let revealed = 0;
@@ -612,4 +608,3 @@ document.querySelectorAll('.bug-card').forEach(card => {
 </script>
 </body>
 </html>
-// ── RENDER CARDS ────────────────────────────────────────────────── const grid = document.getElementById('grid'); let revealed = 0; bugs.forEach((bug, i) => { const card = document.createElement('div'); card.className = 'bug-card'; card.style.setProperty('--card-color', bug.color); card.innerHTML = <div class="card-status"> <span class="status-dot"></span> <span style="opacity:0.4; color:${bug.color}">BUG</span> </div> <div class="bug-code">${bug.code}</div> <div class="bug-name">${bug.name}</div> <div class="bug-desc">${bug.desc}</div> <button class="feature-label">${bug.feature}</button> ; card.addEventListener('click', () => { if (!card.classList.contains('revealed')) { card.classList.add('revealed'); card.querySelector('.card-status span:last-child').textContent = 'REGISTERED'; revealed++; document.getElementById('counter').textContent = ${revealed} / 6 bugs revelados; if (revealed === 6) { setTimeout(() => { document.querySelector('.footer-quote').style.opacity = '0.7'; document.querySelector('.footer-quote').style.transition = 'opacity 1s'; }, 400); } } }); grid.appendChild(card); }); document.addEventListener("click", function(e){ if(e.target.classList.contains("feature-label")){ e.stopPropagation(); // ← ESTO SOLUCIONA EL PROBLEMA const text = e.target.textContent; if(text.includes("aliados")){ window.location.href = "https://baphomet1984.github.io/alliados/"; } } }); // ── CHAOS BUTTON ───────────────────────────────────────────────── let chaosActive = false; const chaosBtn = document.getElementById('chaosBtn'); const chaosMsg = document.getElementById('chaosMsg'); const messages = [ '// segmentation fault (core dumped)', '// NullPointerException at line 42', '// undefined is not a function', '// maximum call stack exceeded', '// FATAL: unexpected token }', '// cannot read property of undefined', ]; let chaosTimeout; chaosBtn.addEventListener('click', () => { chaosActive = !chaosActive; document.body.classList.toggle('chaos', chaosActive); chaosMsg.classList.add('visible'); chaosMsg.textContent = messages[Math.floor(Math.random() * messages.length)]; clearTimeout(chaosTimeout); if (chaosActive) { // auto-reveal a random unrevealed card after 1.5s (bug becomes feature) chaosTimeout = setTimeout(() => { const unrevealed = [...document.querySelectorAll('.bug-card:not(.revealed)')]; if (unrevealed.length) { unrevealed[Math.floor(Math.random() * unrevealed.length)].click(); chaosMsg.textContent = '// bug accepted... transforming into feature ✓'; } document.body.classList.remove('chaos'); chaosActive = false; setTimeout(() => chaosMsg.classList.remove('visible'), 2500); }, 1500); } else { setTimeout(() => chaosMsg.classList.remove('visible'), 2000); } }); // hover: add micro glitch to canvas particles document.querySelectorAll('.bug-card').forEach(card => { card.addEventListener('mouseenter', () => { for (let i = 0; i < 8; i++) { const p = particles[Math.floor(Math.random() * particles.length)]; p.speedY = -2; p.opacity = 0.8; } }); }); </script> </body> </html>
