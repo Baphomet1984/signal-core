@@ -318,6 +318,23 @@ margin-right:6px;
     margin-top: 0.5rem;
   }
   .chaos-message.visible { opacity: 1; }
+
+.hidden-btn{
+  opacity:0;
+  pointer-events:none;
+  margin-top:20px;
+  padding:10px 20px;
+  background:#111;
+  color:#00ffcc;
+  border:1px solid #00ffcc;
+  cursor:pointer;
+  transition:all 0.6s ease;
+}
+
+.hidden-btn.show{
+  opacity:1;
+  pointer-events:auto;
+}
 </style>
 </head>
 <body>
@@ -338,6 +355,11 @@ margin-right:6px;
     <div class="chaos-message" id="chaosMsg">// error inesperado... o ¿feature?</div>
     <div class="counter" id="counter">0 / 6 bugs revelados</div>
   </div>
+
+*/botón secreto/*
+<button id="secret-btn" class="hidden-btn">
+→ Acceder al portal
+</button>
 
   <div class="footer-quote">
     "El sistema humano sigue fallando."
@@ -514,6 +536,19 @@ chaosBtn.addEventListener('click', () => {
   } else {
     setTimeout(() => chaosMsg.classList.remove('visible'), 2000);
   }
+});
+<!--boton secreto-->
+if (revealed === 6) {
+
+  const secretBtn = document.getElementById("secret-btn");
+
+  secretBtn.classList.add("show");
+
+}
+document.getElementById("secret-btn").addEventListener("click", () => {
+
+  window.location.href = "https://google.com";
+
 });
 </script>
 </body>
