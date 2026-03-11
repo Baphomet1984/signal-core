@@ -555,17 +555,7 @@ document.getElementById("counter").textContent =
 
 });
 // ── REDIRECCIÓN LIMPIA ────────────────────────────────────────────
-const btn = card.querySelector(".feature-label");
 
-btn.addEventListener("click",(e)=>{
-
-e.stopPropagation();
-
-const url = e.currentTarget.getAttribute("data-link");
-
-if(url && url !== "#"){
-window.location.href = url;
-}
 
 });
 grid.appendChild(card);
