@@ -542,12 +542,10 @@ document.getElementById('counter').textContent=
 }
 
 });
-
-
 // ── REDIRECCIÓN LIMPIA ────────────────────────────────────────────
 const btn = card.querySelector(".feature-label");
 
-btn.addEventListener("click", (e) => {
+btn.addEventListener("click",(e)=>{
 
 e.stopPropagation();
 
@@ -558,9 +556,12 @@ window.location.href = url;
 }
 
 });
+
 grid.appendChild(card);
 
 });
+
+
 // ── CHAOS BUTTON ─────────────────────────────────────────────────
 let chaosActive = false;
 const chaosBtn = document.getElementById('chaosBtn');
