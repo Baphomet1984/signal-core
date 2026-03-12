@@ -13,7 +13,6 @@
     --amber: #ffb300;
     --red: #ff3366;
     --white: #f0f0f0;
-    --grid: #1a1a2e;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -27,26 +26,18 @@
     cursor: crosshair;
   }
 
-  /* scanline overlay */
   body::before {
     content: '';
     position: fixed; inset: 0;
     background: repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      rgba(0,255,136,0.015) 2px,
-      rgba(0,255,136,0.015) 4px
+      0deg, transparent, transparent 2px,
+      rgba(0,255,136,0.015) 2px, rgba(0,255,136,0.015) 4px
     );
     pointer-events: none;
     z-index: 1;
   }
 
-  canvas {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-  }
+  canvas { position: fixed; inset: 0; z-index: 0; }
 
   .stage {
     position: relative;
@@ -59,11 +50,7 @@
     padding: 2rem;
   }
 
-  /* HEADER */
-  .header {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
+  .header { text-align: center; margin-bottom: 3rem; }
 
   .glitch-title {
     font-family: 'Playfair Display', serif;
@@ -76,11 +63,9 @@
     line-height: 1;
   }
 
-  .glitch-title::before,
-  .glitch-title::after {
+  .glitch-title::before, .glitch-title::after {
     content: attr(data-text);
-    position: absolute;
-    inset: 0;
+    position: absolute; inset: 0;
   }
 
   .glitch-title::before {
@@ -120,7 +105,7 @@
     opacity: 0.7;
   }
 
-  /* BUGS GRID */
+  /* GRID — cada celda es un .card-wrapper */
   .bugs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -130,34 +115,41 @@
     margin-bottom: 2.5rem;
   }
 
+  /* Wrapper: apila tarjeta + botón en columna */
+  .card-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
   .bug-card {
     background: rgba(255,255,255,0.02);
     border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 4px;
+    border-radius: 4px 4px 0 0;
     padding: 1.5rem;
     position: relative;
     overflow: hidden;
     transition: transform 0.2s, border-color 0.3s;
     cursor: pointer;
+    flex: 1;
+  }
+
+  /* Sin link → bordes redondeados completos */
+  .card-wrapper.no-link .bug-card {
+    border-radius: 4px;
   }
 
   .bug-card::before {
     content: '';
-    position: absolute;
-    inset: 0;
+    position: absolute; inset: 0;
     background: linear-gradient(135deg, var(--card-color, var(--green)) 0%, transparent 60%);
     opacity: 0;
     transition: opacity 0.3s;
   }
 
   .bug-card:hover::before { opacity: 0.06; }
-  .bug-card:hover { border-color: var(--card-color, var(--green)); transform: translateY(-3px); }
-
-  .bug-card.revealed {
-    border-color: var(--card-color, var(--green));
-    background: rgba(0,255,136,0.04);
-  }
-
+  .bug-card:hover { border-color: var(--card-color, var(--green)); transform: translateY(-2px); }
+  .bug-card.revealed { border-color: var(--card-color, var(--green)); background: rgba(0,255,136,0.04); }
   .bug-card.revealed::before { opacity: 0.08; }
 
   .card-status {
@@ -177,10 +169,7 @@
     animation: blink 1.5s infinite;
   }
 
-  .bug-card.revealed .status-dot {
-    animation: none;
-    background: var(--green);
-  }
+  .bug-card.revealed .status-dot { animation: none; background: var(--green); }
 
   @keyframes blink {
     0%,100% { opacity: 1; }
@@ -201,7 +190,6 @@
     color: var(--amber);
     opacity: 0.6;
     margin-bottom: 1rem;
-    font-family: 'Space Mono', monospace;
   }
 
   .bug-desc {
@@ -213,41 +201,43 @@
 
   .bug-card.revealed .bug-desc { display: block; opacity: 0.7; }
 
-.feature-label{
-display:none;
-background:transparent;
-border:1px solid var(--card-color, var(--green));
-padding:6px 10px;
-font-size:0.7rem;
-margin-top:10px;
-cursor:pointer;
-text-decoration:none;
-color:var(--card-color, var(--green));
-}
-
-.feature-label:hover{
-background:rgba(255,255,255,0.05);
-}
-
-.bug-card.revealed .feature-label{
-display:inline-block;
-}
-  .hint {
-    font-size: 0.65rem;
-    color: var(--white);
-    opacity: 0.25;
-    letter-spacing: 0.15em;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 0.75rem;
+  /* ── BOTÓN POR TARJETA: hermano del .bug-card, nunca hijo ── */
+  .card-link-btn {
+    display: none;
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--card-color, var(--green));
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    color: var(--card-color, var(--green));
+    font-family: 'Space Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 10px 16px;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.2s, color 0.2s;
+    animation: slideDown 0.25s ease;
   }
 
-  /* CHAOS BUTTON */
-  .chaos-zone {
-    text-align: center;
-    margin-bottom: 2rem;
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
   }
+
+  .card-link-btn:hover {
+    background: var(--card-color, var(--green));
+    color: var(--bg);
+  }
+
+  /* Solo aparece cuando la tarjeta está revealed Y tiene link */
+  .card-wrapper.has-link .bug-card.revealed ~ .card-link-btn {
+    display: block;
+  }
+
+  /* CHAOS */
+  .chaos-zone { text-align: center; margin-bottom: 2rem; }
 
   .chaos-btn {
     background: transparent;
@@ -266,8 +256,7 @@ display:inline-block;
 
   .chaos-btn::before {
     content: '';
-    position: absolute;
-    inset: 0;
+    position: absolute; inset: 0;
     background: var(--red);
     transform: scaleX(0);
     transform-origin: left;
@@ -278,7 +267,6 @@ display:inline-block;
   .chaos-btn:hover { color: var(--bg); }
   .chaos-btn:hover::before { transform: scaleX(1); }
 
-  /* COUNTER */
   .counter {
     font-size: 0.65rem;
     color: var(--green);
@@ -287,7 +275,6 @@ display:inline-block;
     margin-top: 0.5rem;
   }
 
-  /* PARTICLES from canvas */
   .footer-quote {
     margin-top: 2rem;
     font-family: 'Playfair Display', serif;
@@ -299,10 +286,7 @@ display:inline-block;
     max-width: 480px;
   }
 
-  /* chaos mode */
-  body.chaos .glitch-title {
-    animation: shake 0.1s infinite;
-  }
+  body.chaos .glitch-title { animation: shake 0.1s infinite; }
 
   @keyframes shake {
     0% { transform: translate(0,0) rotate(0deg); }
@@ -311,9 +295,7 @@ display:inline-block;
     75% { transform: translate(-1px,2px) rotate(-0.3deg); }
   }
 
-  body.chaos .bug-card {
-    animation: cardShake 0.15s infinite;
-  }
+  body.chaos .bug-card { animation: cardShake 0.15s infinite; }
 
   @keyframes cardShake {
     0%,100% { transform: translate(0,0); }
@@ -332,12 +314,11 @@ display:inline-block;
   }
   .chaos-message.visible { opacity: 1; }
 
-
   /* ── NAV BUTTONS ── */
   .nav-buttons {
     display: flex;
     gap: 0.75rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -348,7 +329,7 @@ display:inline-block;
     border: 1px solid #cc44ff;
     color: #cc44ff;
     font-family: 'Space Mono', monospace;
-    font-size: 0.65rem;
+    font-size: 0.62rem;
     letter-spacing: 0.25em;
     text-transform: uppercase;
     padding: 0.55rem 1.4rem;
@@ -359,7 +340,7 @@ display:inline-block;
     gap: 0.5rem;
     overflow: hidden;
     transition: color 0.25s;
-    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
   }
 
   .nav-btn::before {
@@ -373,21 +354,15 @@ display:inline-block;
 
   .nav-btn::after {
     content: '';
-    position: absolute;
-    left: 0; top: 0;
+    position: absolute; left: 0; top: 0;
     width: 2px; height: 100%;
     background: linear-gradient(180deg, transparent, #ff44cc, transparent);
     transform: translateY(-100%);
   }
 
-  .nav-btn:hover::after {
-    transform: translateY(100%);
-    transition: transform 0.4s ease;
-  }
-
+  .nav-btn:hover::after { transform: translateY(100%); transition: transform 0.4s ease; }
   .nav-btn:hover::before { opacity: 1; }
   .nav-btn:hover { color: #0a0a0f; box-shadow: 0 0 20px rgba(204,68,255,0.6), 0 0 40px rgba(204,68,255,0.2); }
-
   .nav-btn span { position: relative; z-index: 1; }
 
   .nav-btn .dot {
@@ -400,14 +375,12 @@ display:inline-block;
   }
 
   .nav-btn.disabled {
-    border-color: rgba(204,68,255,0.25);
-    color: rgba(204,68,255,0.3);
+    border-color: rgba(204,68,255,0.22);
+    color: rgba(204,68,255,0.28);
     cursor: not-allowed;
-    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
   }
-
-  .nav-btn.disabled .dot { background: rgba(255,68,204,0.25); animation: none; }
-  .nav-btn.disabled:hover { color: rgba(204,68,255,0.3); box-shadow: none; }
+  .nav-btn.disabled .dot { background: rgba(255,68,204,0.22); animation: none; }
+  .nav-btn.disabled:hover { color: rgba(204,68,255,0.28); box-shadow: none; }
   .nav-btn.disabled:hover::before { opacity: 0; }
 
 </style>
@@ -420,7 +393,7 @@ display:inline-block;
 
   <div class="header">
     <div class="glitch-title" data-text="Fail News">Fail News</div>
-    <div class="subtitle">Transmisiones del sistema.Eventos, anomalias y rumores detectados en la red. Lee bajo tu propio riesgo.</div>
+    <div class="subtitle">Transmisiones del sistema. Eventos, anomalias y rumores detectados en la red. Lee bajo tu propio riesgo.</div>
   </div>
 
 
@@ -447,32 +420,25 @@ display:inline-block;
 
   <div class="footer-quote">
     "El sistema humano sigue fallando."
-      SYSTEM LOG
-  hub.uplink.status : unstable
-  monitoring anomalies since 2025
+    SYSTEM LOG · hub.uplink.status : unstable · monitoring anomalies since 2025
   </div>
 
 </div>
 
 <script>
-// ── CANVAS BACKGROUND ──────────────────────────────────────────────
+// ── CANVAS ────────────────────────────────────────────────────────
 const canvas = document.getElementById('c');
 const ctx = canvas.getContext('2d');
 let W, H, particles = [];
 
-function resize() {
-  W = canvas.width = window.innerWidth;
-  H = canvas.height = window.innerHeight;
-}
-
+function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
 resize();
 window.addEventListener('resize', resize);
 
 class Particle {
   constructor() { this.reset(); }
   reset() {
-    this.x = Math.random() * W;
-    this.y = Math.random() * H;
+    this.x = Math.random() * W; this.y = Math.random() * H;
     this.size = Math.random() * 1.5 + 0.3;
     this.speedY = -(Math.random() * 0.4 + 0.1);
     this.speedX = (Math.random() - 0.5) * 0.2;
@@ -480,9 +446,7 @@ class Particle {
     this.color = Math.random() > 0.7 ? '#ffb300' : '#00ff88';
   }
   update() {
-    this.y += this.speedY;
-    this.x += this.speedX;
-    this.opacity -= 0.001;
+    this.y += this.speedY; this.x += this.speedX; this.opacity -= 0.001;
     if (this.y < 0 || this.opacity <= 0) this.reset();
   }
   draw() {
@@ -491,27 +455,21 @@ class Particle {
     ctx.fillRect(this.x, this.y, this.size, this.size);
   }
 }
-
 for (let i = 0; i < 120; i++) particles.push(new Particle());
 
-// flowing "code" lines
 let codeLines = [];
 const chars = '01アイウエオ{};()=>!null';
 class CodeLine {
   constructor() { this.reset(); }
   reset() {
-    this.x = Math.random() * W;
-    this.y = -20;
+    this.x = Math.random() * W; this.y = -20;
     this.speed = Math.random() * 1.5 + 0.5;
     this.chars = Array.from({length: Math.floor(Math.random()*6+3)},
       () => chars[Math.floor(Math.random()*chars.length)]).join('');
     this.opacity = Math.random() * 0.08 + 0.02;
     this.size = Math.random() * 8 + 7;
   }
-  update() {
-    this.y += this.speed;
-    if (this.y > H + 50) this.reset();
-  }
+  update() { this.y += this.speed; if (this.y > H + 50) this.reset(); }
   draw() {
     ctx.globalAlpha = this.opacity;
     ctx.fillStyle = '#00ff88';
@@ -519,27 +477,13 @@ class CodeLine {
     ctx.fillText(this.chars, this.x, this.y);
   }
 }
-
-for (let i = 0; i < 30; i++) {
-  const cl = new CodeLine();
-  cl.y = Math.random() * H;
-  codeLines.push(cl);
-}
+for (let i = 0; i < 30; i++) { const cl = new CodeLine(); cl.y = Math.random() * H; codeLines.push(cl); }
 
 function animate() {
-  ctx.clearRect(0, 0, W, H);
-  ctx.globalAlpha = 1;
-
-  // dark grid
-  ctx.strokeStyle = 'rgba(0,255,136,0.03)';
-  ctx.lineWidth = 1;
-  for (let x = 0; x < W; x += 60) {
-    ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x,H); ctx.stroke();
-  }
-  for (let y = 0; y < H; y += 60) {
-    ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(W,y); ctx.stroke();
-  }
-
+  ctx.clearRect(0, 0, W, H); ctx.globalAlpha = 1;
+  ctx.strokeStyle = 'rgba(0,255,136,0.03)'; ctx.lineWidth = 1;
+  for (let x = 0; x < W; x += 60) { ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x,H); ctx.stroke(); }
+  for (let y = 0; y < H; y += 60) { ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(W,y); ctx.stroke(); }
   particles.forEach(p => { p.update(); p.draw(); });
   codeLines.forEach(cl => { cl.update(); cl.draw(); });
   ctx.globalAlpha = 1;
@@ -547,124 +491,75 @@ function animate() {
 }
 animate();
 
-// ── BUG DATA ──────────────────────────────────────────────────────
+// ── DATA ──────────────────────────────────────────────────────────
 const bugs = [
-{
-code:'ERR_0001 ::Actualizaciones del sistema',
-name:'Nuevo módulo detectado.',
-color:'#00ff88',
-feature:'→ Portal de aliados',
-link:'https://www.google.com',
-desc:'Nombre: Portal de Aliados. Estado: activo.'
-},
-{
-code:'ERR_0002 :: Reportes de visitantes',
-name:'Actividad inusual detectada.',
-color:'#ff3366',
-feature:'→ Investigando…',
-link:'#',
-desc:'Países conectados hoy: México, Brasil, Alemania.'
-},
-{
-code:'ERR_0003 ::Rumores del sistema',
-name:'Usuarios reportan una versión del hub que no aparece en el menú.',
-color:'#ffb300',
-feature:'→ El sistema no confirma ni niega',
-link:'#',
-desc:'Se dice que aparece solo después de las 3:33 AM.'
-},
-{
-code:'ERR_0004 ::Noticias del ecosistema',
-name:'El algoritmo volvió a cambiar',
-color:'#00ff88',
-feature:'→ Resultado: nadie lo entiende',
-link:'#',
-desc:'Miles de creadores intentando entenderlo.'
-},
-{
-code:'ERR_0005 ::Alertas del sistema',
-name:'Intento de acceso detectado.',
-color:'#ff3366',
-feature:'→ Acceso bloqueado',
-link:'#',
-desc:'Origen desconocido. El gate respondió correctamente.'
-},
-{
-code:'ERR_0006 ::Puebla',
-name:'Puebla encabeza las muertes por influenza en México durante 2026.',
-color:'#ffb300',
-feature:'→ Moraleja del sistema',
-link:'#',
-desc:'29 fallecimientos y más de 14 mil consultas médicas.'
-}
+  { code:'ERR_0001 ::Actualizaciones del sistema', name:'Nuevo módulo detectado.', color:'#00ff88', feature:'→ Portal de aliados', link:'https://www.google.com', desc:'Nombre: Portal de Aliados. Estado: activo.' },
+  { code:'ERR_0002 :: Reportes de visitantes', name:'Actividad inusual detectada.', color:'#ff3366', feature:'→ Investigando…', link:'#', desc:'Países conectados hoy: México, Brasil, Alemania.' },
+  { code:'ERR_0003 ::Rumores del sistema', name:'Usuarios reportan una versión del hub que no aparece en el menú.', color:'#ffb300', feature:'→ El sistema no confirma ni niega', link:'#', desc:'Se dice que aparece solo después de las 3:33 AM.' },
+  { code:'ERR_0004 ::Noticias del ecosistema', name:'El algoritmo volvió a cambiar', color:'#00ff88', feature:'→ Resultado: nadie lo entiende', link:'#', desc:'Miles de creadores intentando entenderlo.' },
+  { code:'ERR_0005 ::Alertas del sistema', name:'Intento de acceso detectado.', color:'#ff3366', feature:'→ Acceso bloqueado', link:'#', desc:'Origen desconocido. El gate respondió correctamente.' },
+  { code:'ERR_0006 ::Puebla', name:'Puebla encabeza las muertes por influenza en México durante 2026.', color:'#ffb300', feature:'→ Moraleja del sistema', link:'#', desc:'29 fallecimientos y más de 14 mil consultas médicas.' }
 ];
 
-// ── RENDER CARDS ──────────────────────────────────────────────────
+// ── CARDS ─────────────────────────────────────────────────────────
 const grid = document.getElementById('grid');
 let revealed = 0;
 
 bugs.forEach(bug => {
+  const hasLink = bug.link && bug.link !== '#';
 
-const card = document.createElement('div');
-card.className='bug-card';
-card.style.setProperty('--card-color', bug.color);
+  // Wrapper que agrupa tarjeta + botón
+  const wrapper = document.createElement('div');
+  wrapper.className = 'card-wrapper' + (hasLink ? ' has-link' : ' no-link');
 
-card.innerHTML=`
-<div class="card-status">
-<span class="status-dot"></span>
-<span style="opacity:0.4;color:${bug.color}">BUG</span>
-</div>
+  // Tarjeta
+  const card = document.createElement('div');
+  card.className = 'bug-card';
+  card.style.setProperty('--card-color', bug.color);
+  card.innerHTML = `
+    <div class="card-status">
+      <span class="status-dot"></span>
+      <span style="opacity:0.4;color:${bug.color}">BUG</span>
+    </div>
+    <div class="bug-code">${bug.code}</div>
+    <div class="bug-name">${bug.name}</div>
+    <div class="bug-desc">${bug.desc}</div>
+  `;
 
-<div class="bug-code">${bug.code}</div>
-<div class="bug-name">${bug.name}</div>
-<div class="bug-desc">${bug.desc}</div>
+  // Botón — hermano de la tarjeta, NO hijo
+  const btn = document.createElement('button');
+  btn.className = 'card-link-btn';
+  btn.style.setProperty('--card-color', bug.color);
+  btn.textContent = bug.feature;
 
-<a class="feature-label"
-   href="${bug.link}"
-   target="_blank"
-   rel="noopener noreferrer">
-${bug.feature}
-</a>
-`;
+  // Click tarjeta → solo revela
+  card.addEventListener('click', function() {
+    if (!card.classList.contains('revealed')) {
+      card.classList.add('revealed');
+      card.querySelector('.card-status span:last-child').textContent = 'REGISTERED';
+      revealed++;
+      document.getElementById('counter').textContent = `${revealed} / ${bugs.length} bugs revelados`;
+    }
+  });
 
-card.addEventListener("click",(e)=>{
+  // Click botón → solo navega (evento completamente separado)
+  btn.addEventListener('click', function() {
+    window.location.href = bug.link;
+  });
 
-// si el click fue en el botón → no revelar
-if(e.target.closest(".feature-label")) return;
+  card.addEventListener('mouseenter', () => {
+    for (let i = 0; i < 8; i++) {
+      const p = particles[Math.floor(Math.random() * particles.length)];
+      p.speedY = -2; p.opacity = 0.8;
+    }
+  });
 
-if(!card.classList.contains("revealed")){
-
-card.classList.add("revealed");
-
-card.querySelector(".card-status span:last-child").textContent="REGISTERED";
-
-revealed++;
-
-document.getElementById("counter").textContent =
-`${revealed} / ${bugs.length} bugs revelados`;
-
-}
-
-});
-// ── REDIRECCIÓN LIMPIA ────────────────────────────────────────────
-const btn = card.querySelector(".feature-label");
-
-btn.addEventListener("click",(e)=>{
-
-e.stopPropagation();
-
-const url = e.currentTarget.getAttribute("data-link");
-
-if(url && url !== "#"){
-window.location.href = url;
-}
-
-});
-grid.appendChild(card);
-
+  wrapper.appendChild(card);
+  if (hasLink) wrapper.appendChild(btn);
+  grid.appendChild(wrapper);
 });
 
-// ── CHAOS BUTTON ─────────────────────────────────────────────────
+// ── CHAOS ─────────────────────────────────────────────────────────
 let chaosActive = false;
 const chaosBtn = document.getElementById('chaosBtn');
 const chaosMsg = document.getElementById('chaosMsg');
@@ -676,7 +571,6 @@ const messages = [
   '// FATAL: unexpected token }',
   '// cannot read property of undefined',
 ];
-
 let chaosTimeout;
 
 chaosBtn.addEventListener('click', () => {
@@ -684,10 +578,8 @@ chaosBtn.addEventListener('click', () => {
   document.body.classList.toggle('chaos', chaosActive);
   chaosMsg.classList.add('visible');
   chaosMsg.textContent = messages[Math.floor(Math.random() * messages.length)];
-
   clearTimeout(chaosTimeout);
   if (chaosActive) {
-    // auto-reveal a random unrevealed card after 1.5s (bug becomes feature)
     chaosTimeout = setTimeout(() => {
       const unrevealed = [...document.querySelectorAll('.bug-card:not(.revealed)')];
       if (unrevealed.length) {
@@ -702,18 +594,6 @@ chaosBtn.addEventListener('click', () => {
     setTimeout(() => chaosMsg.classList.remove('visible'), 2000);
   }
 });
-
-// hover: add micro glitch to canvas particles
-document.querySelectorAll('.bug-card').forEach(card => {
-  card.addEventListener('mouseenter', () => {
-    for (let i = 0; i < 8; i++) {
-      const p = particles[Math.floor(Math.random() * particles.length)];
-      p.speedY = -2;
-      p.opacity = 0.8;
-    }
-  });
-
-});  
 </script>
 </body>
 </html>
