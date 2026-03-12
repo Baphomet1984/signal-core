@@ -580,13 +580,6 @@ bugs.forEach(bug => {
   wrapper.appendChild(card);
   if (hasLink) wrapper.appendChild(btn);
   grid.appendChild(wrapper);
-if (revealed === 6) {
-
-  const secretBtn = document.getElementById("secret-btn");
-
-  secretBtn.classList.add("show");
-
-}
 });
 
 // ── CHAOS ─────────────────────────────────────────────────────────
@@ -623,11 +616,15 @@ chaosBtn.addEventListener('click', () => {
   } else {
     setTimeout(() => chaosMsg.classList.remove('visible'), 2000);
   }
-    document.getElementById("secret-btn").addEventListener("click", () => {
+if (revealed === 6) {
+
+  const secretBtn = document.getElementById("secret-btn");
+
+  secretBtn.classList.add("show");
+
+}    document.getElementById("secret-btn").addEventListener("click", () => {
 
   window.location.href = "https://baphomet1984.github.io/systemtag/gate/?lvl=unlkd&go=signal-unlkd";
-
-});
 });
 </script>
 </body>
