@@ -580,7 +580,6 @@ bugs.forEach(bug => {
   wrapper.appendChild(card);
   if (hasLink) wrapper.appendChild(btn);
   grid.appendChild(wrapper);
-});
 if (revealed === 6) {
 
   const secretBtn = document.getElementById("secret-btn");
@@ -588,6 +587,8 @@ if (revealed === 6) {
   secretBtn.classList.add("show");
 
 }
+});
+
 // ── CHAOS ─────────────────────────────────────────────────────────
 let chaosActive = false;
 const chaosBtn = document.getElementById('chaosBtn');
