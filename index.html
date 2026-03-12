@@ -404,17 +404,22 @@ margin-right:6px;
 position:fixed;
 bottom:5px;
 right:5px;
-opacity:0.2;
+opacity:0;
+pointer-events:none;
 font-size:14px;
-text-decoration:none;
 background:none;
 border:none;
 color:inherit;
 cursor:pointer;
-transition:opacity 0.3s;
+transition:opacity 0.4s;
 }
 
-.hidden-btn:hover{
+.hidden-btn.show{
+opacity:0.2;
+pointer-events:auto;
+}
+
+.hidden-btn.show:hover{
 opacity:1;
 }
 </style>
@@ -577,6 +582,11 @@ bugs.forEach(bug => {
       card.querySelector('.card-status span:last-child').textContent = 'REGISTERED';
       revealed++;
       document.getElementById('counter').textContent = `${revealed} / ${bugs.length} bugs revelados`;
+
+if (revealed === bugs.length) {
+  const secretBtn = document.getElementById("secret-btn");
+  secretBtn.classList.add("show");
+}
     }
   });
 
@@ -631,13 +641,13 @@ chaosBtn.addEventListener('click', () => {
   } else {
     setTimeout(() => chaosMsg.classList.remove('visible'), 2000);
   }
-if (revealed === 6) {
+<!--if (revealed === 6) {
 
   const secretBtn = document.getElementById("secret-btn");
 
   secretBtn.classList.add("show");
 
-}    document.getElementById("secret-btn").addEventListener("click", () => {
+}-->    document.getElementById("secret-btn").addEventListener("click", () => {
 
   window.location.href = "https://baphomet1984.github.io/systemtag/gate/?lvl=unlkd&go=signal-unlkd";
 });
