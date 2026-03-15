@@ -538,9 +538,19 @@ animate();
 
 // ── DATA ──────────────────────────────────────────────────────────
 
+// mapa de colores por tipo de noticia
+const typeColors = {
+
+rumor:"#ffb300",
+alert:"#ff3366",
+system:"#00ff88",
+random:"#66ccff"
+
+};
+
 let bugs = [];
 
-fetch("news.json")
+fetch("news.json?v=" + Date.now())
   .then(res => res.json())
   .then(data => {
     bugs = data.bugs;
@@ -570,11 +580,14 @@ bugs.forEach(bug => {
   card.className = 'bug-card';
   card.style.setProperty('--card-color', bug.color);
 
+  const color = typeColors[bug.type] || "#00ff88";
+  card.style.setProperty('--card-color', color);
+  
   card.innerHTML = `
-    <div class="card-status">
-      <span class="status-dot"></span>
-      <span style="opacity:0.4;color:${bug.color}">BUG</span>
-    </div>
+<div class="card-status">
+<span class="status-dot"></span>
+<span style="opacity:0.4;color:${color}">${bug.type.toUpperCase()}</span>
+</div>
 
     <div class="bug-code">${bug.code}</div>
     <div class="bug-name">${bug.name}</div>
@@ -583,9 +596,9 @@ bugs.forEach(bug => {
 
   // Botón — hermano de la tarjeta, NO hijo
   const btn = document.createElement('button');
-  btn.className = 'card-link-btn';
-  btn.style.setProperty('--card-color', bug.color);
-  btn.textContent = bug.feature;
+btn.className = 'card-link-btn';
+btn.style.setProperty('--card-color', color);
+btn.textContent = bug.feature;
 
   // Click tarjeta → solo revela
   card.addEventListener('click', function() {
