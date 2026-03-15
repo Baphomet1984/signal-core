@@ -1,59 +1,59 @@
 {
-  "bugs":[
+  "bugs": [
 
-{
-"type":"alert",
-"code":"WAR-DRN-772",
-"name":"Drones autónomos redefinen el campo de batalla",
-"desc":"Analistas militares reportan un incremento masivo en el uso de enjambres de drones semiautónomos en conflictos recientes. La nueva generación de sistemas de ataque puede identificar objetivos con IA y coordinarse entre múltiples unidades. Algunos estrategas advierten que esta tecnología podría cambiar las reglas de la guerra moderna en menos de una década.",
-"feature":"ver informe",
-"link":"https://en.wikipedia.org/wiki/Loitering_munition"
-},
+    {
+      "type": "alert",
+      "code": "CRIME-NE-331",
+      "name": "Un presunto asesino serial acecha Nueva Inglaterra.",
+      "desc": "Desde marzo de 2025, más de 10 cuerpos de mujeres fueron hallados en Connecticut, Rhode Island y Massachusetts. Un grupo de Facebook llamado 'New England Serial Killer' creció a 23,000 miembros en días. La policía niega el vínculo... por ahora.",
+      "feature": "ver reporte",
+      "link": "https://turnto10.com/news/local/groton-police-debunk-serial-killer-theories-across-new-england-rhode-island-connecticut-massachusetts-april-25-2025"
+    },
 
-{
-"type":"system",
-"code":"TECH-AI-991",
-"name":"La carrera por los chips de IA se acelera",
-"desc":"Fabricantes de hardware están compitiendo por producir procesadores especializados en inteligencia artificial. Centros de datos y empresas tecnológicas están invirtiendo miles de millones para sostener la demanda de modelos cada vez más grandes.",
-"feature":"leer análisis",
-"link":"https://www.xataka.com/tag/inteligencia-artificial"
-},
+    {
+      "type": "rumor",
+      "code": "CONSPIR-EPX-007",
+      "name": "Los archivos Epstein: 3.5 millones de documentos. 2.5 millones retenidos.",
+      "desc": "El gobierno de EE.UU. revisó ~6 millones de documentos pero solo liberó 3.5 millones. Con redacciones masivas y teorías sobre la CIA, el Mossad y listas de nombres poderosos, la verdad sigue enterrada bajo tinta negra.",
+      "feature": "leer análisis",
+      "link": "https://www.npr.org/2026/01/02/nx-s1-5662638/epstein-files-release-trump-conspiracy-2026"
+    },
 
-{
-"type":"rumor",
-"code":"TECH-NET-404",
-"name":"Internet está lleno de contenido generado por IA",
-"desc":"Investigadores aseguran que una parte creciente del contenido online ya no proviene de humanos. Blogs, noticias y comentarios podrían estar siendo escritos por sistemas automáticos. Algunos llaman a esto el inicio del 'internet sintético'.",
-"feature":"ver reporte",
-"link":"https://www.xataka.com/investigacion"
-},
+    {
+      "type": "system",
+      "code": "METAL-MTL-001",
+      "name": "Metallica será la primera banda de metal en tocar la Sphere de Las Vegas.",
+      "desc": "En octubre de 2026, Metallica toma la Sphere con su residencia 'Life Burns Faster': 8 shows, 4 fines de semana, setlists distintos cada noche. Lars Ulrich: 'Way fuckin' psyched to go next level.'",
+      "feature": "ver detalles",
+      "link": "https://loudwire.com/metallica-las-vegas-sphere-2026/"
+    },
 
-{
-"type":"random",
-"code":"WORLD-ANOM-221",
-"name":"La lluvia de peces vuelve a ocurrir",
-"desc":"Habitantes de Yoro, Honduras, reportaron nuevamente el extraño fenómeno conocido como 'Lluvia de Peces'. Tras una tormenta intensa, peces aparecen esparcidos por las calles. Científicos siguen discutiendo si tornados acuáticos podrían explicar el fenómeno.",
-"feature":"ver fenómeno",
-"link":"https://en.wikipedia.org/wiki/Rain_of_animals"
-},
+    {
+      "type": "random",
+      "code": "SCI-DREAM-202",
+      "name": "Científicos lograron plantar ideas dentro de sueños.",
+      "desc": "Neurocientíficos de Northwestern University demostraron que los sueños pueden ser dirigidos hacia temas específicos mientras se duerme. Los sujetos despertaron con soluciones creativas a problemas que no habían podido resolver estando despiertos.",
+      "feature": "ver estudio",
+      "link": "https://www.sciencedaily.com/news/strange_offbeat/"
+    },
 
-{
-"type":"alert",
-"code":"CRIME-ARCH-666",
-"name":"Archivos de asesinos seriales reabiertos",
-"desc":"Un equipo de investigadores forenses está reexaminando casos antiguos de asesinos seriales utilizando nuevas técnicas de ADN. Algunos expedientes cerrados podrían revelar víctimas que nunca fueron identificadas.",
-"feature":"ver archivos",
-"link":"https://en.wikipedia.org/wiki/Serial_killer"
-},
+    {
+      "type": "alert",
+      "code": "METAL-MEGA-999",
+      "name": "Megadeth anuncia su gira de despedida. Duración estimada: 3 a 5 años.",
+      "desc": "Dave Mustaine confirmó que la farewell tour de Megadeth comenzó en abril 2026. También lanzaron un álbum homónimo en enero. Si la gira dura 5 años, podrían estar diciendo adiós hasta 2031.",
+      "feature": "ver gira",
+      "link": "https://loudwire.com/2026-rock-metal-tour-guide/"
+    },
 
-{
-"type":"rumor",
-"code":"NET-GLITCH-303",
-"name":"Usuarios reportan enlaces que desaparecen",
-"desc":"En foros de tecnología, varios usuarios aseguran haber visto enlaces que aparecen brevemente en páginas web y luego desaparecen al recargar. Algunos creen que se trata de pruebas de sistemas automatizados o contenido experimental.",
-"feature":"investigar",
-"link":"https://en.wikipedia.org/wiki/Glitch"
-}
+    {
+      "type": "rumor",
+      "code": "SCI-BRAIN-404",
+      "name": "El THC no solo borra recuerdos: puede crear memorias de cosas que nunca pasaron.",
+      "desc": "Un nuevo estudio reveló que el THC no simplemente distorsiona la memoria — activamente genera recuerdos falsos en el cerebro. Los sujetos describieron con detalle eventos que nunca ocurrieron. Implicaciones forenses y legales: pendientes.",
+      "feature": "ver hallazgo",
+      "link": "https://www.sciencedaily.com/news/top/science/"
+    }
 
-]
+  ]
 }
