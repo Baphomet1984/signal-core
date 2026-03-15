@@ -557,15 +557,70 @@ let bugs = [];
 
 fetch("news.json?v=" + Date.now())
   .then(res => res.json())
-  .then(data => {
-    bugs = data.bugs;
-    buildCards();
-  })
+.then(data => {
+
+bugs = data.bugs;
+
+const device = getDeviceInfo();
+
+bugs.unshift({
+
+type:"system",
+code:"SYS-SCAN",
+name:"Terminal detectado",
+desc:`
+OS: ${device.os}
+Browser: ${device.browser}
+Resolution: ${device.resolution}
+Language: ${device.language}
+Cores: ${device.cores}
+Memory: ${device.memory}GB
+Timezone: ${device.timezone}
+`,
+feature:"ver nodo",
+link:"#"
+
+});
+
+buildCards();
+
+})
   .catch(err => {
     console.error("Error cargando news.json", err);
   });
 // ── CARDS ─────────────────────────────────────────────────────────
+function getDeviceInfo(){
 
+const ua = navigator.userAgent;
+
+let os = "Unknown OS";
+
+if(ua.includes("Win")) os="Windows";
+else if(ua.includes("Mac")) os="MacOS";
+else if(ua.includes("Linux")) os="Linux";
+else if(ua.includes("Android")) os="Android";
+else if(ua.includes("iPhone")) os="iOS";
+
+let browser="Unknown";
+
+if(ua.includes("Chrome")) browser="Chrome";
+else if(ua.includes("Firefox")) browser="Firefox";
+else if(ua.includes("Safari")) browser="Safari";
+else if(ua.includes("Edge")) browser="Edge";
+
+return {
+
+os,
+browser,
+language:navigator.language,
+resolution:screen.width+"x"+screen.height,
+timezone:Intl.DateTimeFormat().resolvedOptions().timeZone,
+cores:navigator.hardwareConcurrency || "?",
+memory:navigator.deviceMemory || "?"
+
+};
+
+}
   function buildCards(){
 
 const grid = document.getElementById('grid');
