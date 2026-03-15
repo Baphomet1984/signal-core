@@ -3,7 +3,7 @@
     {
       "code":"ERR_0001 ::Actualizaciones del sistema",
       "name":"Nuevo módulo detectado.",
-      "color":"#00ff88",
+      "type":"alert",
       "feature":"→ Portal de aliados",
       "link":"https://baphomet1984.github.io/alliados/",
       "desc":"Nombre: Portal de Aliados. Estado: activo."
@@ -12,7 +12,7 @@
     {
       "code":"ERR_0002 :: Reportes de visitantes",
       "name":"Actividad inusual detectada.",
-      "color":"#ff3366",
+      "type":"alert",
       "feature":"→ Investigando…",
       "link":"#",
       "desc":"Países conectados hoy: México, Brasil, Alemania."
@@ -21,7 +21,7 @@
     {
       "code":"ERR_0003 ::Rumores del sistema",
       "name":"Usuarios reportan una versión del hub que no aparece en el menú.",
-      "color":"#ffb300",
+      "type":"system",
       "feature":"→ El sistema no confirma ni niega",
       "link":"#",
       "desc":"Se dice que aparece solo después de las 3:33 AM."
@@ -30,28 +30,46 @@
     {
       "code":"ERR_0004 ::Noticias del ecosistema",
       "name":"El algoritmo volvió a cambiar",
-      "color":"#00ff88",
+      "type":"system", 
       "feature":"→ Resultado: nadie lo entiende",
       "link":"#",
       "desc":"Miles de creadores intentando entenderlo."
     },
 
     {
-      "code":"ERR_0005 :: Cultura Pop",
- "name":"Metallica vuelve a romper Spotify",
- "color":"#00ff88",
- "feature":"→ Abrir reporte",
- "link":"#",
- "desc":"El algoritmo del streaming colapsó otra vez por fans del metal."
+     "code":"ERR_0005 :: Cultura Pop",
+     "name":"Metallica vuelve a romper Spotify",
+     "type":"random",
+     "feature":"→ Abrir reporte",
+     "link":"#",
+     "desc":"El algoritmo del streaming colapsó otra vez por fans del metal."
     },
 
     {
       "code":"ERR_0006 ::Puebla",
       "name":"Puebla encabeza las muertes por influenza en México durante 2026.",
-      "color":"#ffb300",
+      "type":"random",
       "feature":"→ Moraleja del sistema",
       "link":"#",
       "desc":"29 fallecimientos y más de 14 mil consultas médicas."
     }
+        {
+      "code":"ERR_0007 ::Actualizaciones del sistema",
+      "name":"Nuevo módulo detectado.",
+      "type":"rumor",
+      "feature":"→ Portal de aliados",
+      "link":"https://baphomet1984.github.io/alliados/",
+      "desc":"Nombre: Portal de Aliados. Estado: activo."
+    },
+
+    {
+      "code":"ERR_0008 :: Reportes de visitantes",
+      "name":"Actividad inusual detectada.",
+      "type":"rumor",
+      "feature":"→ Investigando…",
+      "link":"#",
+      "desc":"Países conectados hoy: México, Brasil, Alemania."
+    },
+
   ]
 }
