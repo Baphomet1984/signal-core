@@ -1,59 +1,32 @@
+"{
+  "type": "alert",
+  "code": "PARA-VOID-404",
+  "name": "Investigadores registran supuesta 'voz del vacío' en un bosque de Canadá",
+  "desc": "Un grupo de exploradores paranormales afirma haber captado una voz inexplicable en una zona remota de Canadá. El audio, grabado durante la madrugada, parece responder preguntas en susurros. Algunos creen que podría tratarse de un fenómeno acústico natural... otros dicen que algo respondió desde la oscuridad.",
+  "feature": "ver evidencia",
+  "link": "https://youtu.be/dQw4w9WgXcQ"
+},
 {
-  "bugs": [
-
-    {
-      "type": "alert",
-      "code": "CRIME-NE-331",
-      "name": "Un presunto asesino serial acecha Nueva Inglaterra.",
-      "desc": "Desde marzo de 2025, más de 10 cuerpos de mujeres fueron hallados en Connecticut, Rhode Island y Massachusetts. Un grupo de Facebook llamado 'New England Serial Killer' creció a 23,000 miembros en días. La policía niega el vínculo... por ahora.",
-      "feature": "ver reporte",
-      "link": "https://turnto10.com/news/local/groton-police-debunk-serial-killer-theories-across-new-england-rhode-island-connecticut-massachusetts-april-25-2025"
-    },
-
-    {
-      "type": "rumor",
-      "code": "CONSPIR-EPX-007",
-      "name": "Los archivos Epstein: 3.5 millones de documentos. 2.5 millones retenidos.",
-      "desc": "El gobierno de EE.UU. revisó ~6 millones de documentos pero solo liberó 3.5 millones. Con redacciones masivas y teorías sobre la CIA, el Mossad y listas de nombres poderosos, la verdad sigue enterrada bajo tinta negra.",
-      "feature": "leer análisis",
-      "link": "https://www.npr.org/2026/01/02/nx-s1-5662638/epstein-files-release-trump-conspiracy-2026"
-    },
-
-    {
-      "type": "system",
-      "code": "METAL-MTL-001",
-      "name": "Metallica será la primera banda de metal en tocar la Sphere de Las Vegas.",
-      "desc": "En octubre de 2026, Metallica toma la Sphere con su residencia 'Life Burns Faster': 8 shows, 4 fines de semana, setlists distintos cada noche. Lars Ulrich: 'Way fuckin' psyched to go next level.'",
-      "feature": "ver detalles",
-      "link": "https://loudwire.com/metallica-las-vegas-sphere-2026/"
-    },
-
-    {
-      "type": "alert",
-      "code": "HEAD-SHOT-01",
-      "name": "Sicario apunta y dispara a un policía en la cabeza",
-      "desc": "¿Qué sucede cuando una situación de rutina se convierte en una emboscada mortal?",
-      "feature": "ver video",
-      "link": "https://youtu.be/kAmTVcYVbMY?si=filaWQ9dlwMv1jw5"
-    },
-
-    {
-      "type": "alert",
-      "code": "METAL-MEGA-999",
-      "name": "Megadeth anuncia su gira de despedida. Duración estimada: 3 a 5 años.",
-      "desc": "Dave Mustaine confirmó que la farewell tour de Megadeth comenzó en abril 2026. También lanzaron un álbum homónimo en enero. Si la gira dura 5 años, podrían estar diciendo adiós hasta 2031.",
-      "feature": "ver gira",
-      "link": "https://loudwire.com/2026-rock-metal-tour-guide/"
-    },
-
-    {
-      "type": "rumor",
-      "code": "SCI-BRAIN-404",
-      "name": "El THC no solo borra recuerdos: puede crear memorias de cosas que nunca pasaron.",
-      "desc": "Un nuevo estudio reveló que el THC no simplemente distorsiona la memoria — activamente genera recuerdos falsos en el cerebro. Los sujetos describieron con detalle eventos que nunca ocurrieron. Implicaciones forenses y legales: pendientes.",
-      "feature": "ver hallazgo",
-      "link": "https://www.sciencedaily.com/news/top/science/"
-    }
-
-  ]
+  "type": "alert",
+  "code": "CONSP-ORBIT-777",
+  "name": "Teóricos aseguran que ciertos satélites vigilan más que el clima",
+  "desc": "Una nueva ola de teorías conspirativas señala que algunos satélites en órbita baja estarían recopilando datos biométricos masivos. Aunque agencias espaciales niegan estas acusaciones, comunidades en línea analizan patrones extraños en transmisiones públicas.",
+  "feature": "leer informe",
+  "link": "https://www.space.com"
+},
+{
+  "type": "alert",
+  "code": "BIO-DESIRE-69",
+  "name": "Estudio revela cómo el cerebro reacciona al deseo sexual",
+  "desc": "Investigadores en neurociencia descubrieron que ciertas regiones del cerebro se activan intensamente cuando se percibe atracción sexual. El estudio explica cómo la dopamina y la oxitocina pueden alterar la toma de decisiones y generar comportamientos impulsivos.",
+  "feature": "ver estudio",
+  "link": "https://www.sciencedaily.com"
+},
+{
+  "type": "alert",
+  "code": "ANDROID-HACK-042",
+  "name": "Truco secreto de Android permite liberar memoria en segundos",
+  "desc": "Muchos usuarios de Android no saben que pueden liberar RAM rápidamente entrando en las opciones de desarrollador y limitando procesos en segundo plano. Este pequeño ajuste puede mejorar el rendimiento en teléfonos antiguos o saturados.",
+  "feature": "ver tutorial",
+  "link": "https://www.xataka.com"
 }
