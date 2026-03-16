@@ -1,4 +1,6 @@
 {
+  "bugs":[
+{
   "type": "alert",
   "code": "PARA-VOID-404",
   "name": "Investigadores registran supuesta 'voz del vacío' en un bosque de Canadá",
@@ -29,4 +31,6 @@
   "desc": "Muchos usuarios de Android no saben que pueden liberar RAM rápidamente entrando en las opciones de desarrollador y limitando procesos en segundo plano. Este pequeño ajuste puede mejorar el rendimiento en teléfonos antiguos o saturados.",
   "feature": "ver tutorial",
   "link": "https://www.xataka.com"
+}
+]
 }
