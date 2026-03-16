@@ -29,7 +29,7 @@
     },
 
     {
-      "type": "random",
+      "type": "alert",
       "code": "HEAD-SHOT-01",
       "name": "Sicario apunta y dispara a un policía en la cabeza",
       "desc": "¿Qué sucede cuando una situación de rutina se convierte en una emboscada mortal?
