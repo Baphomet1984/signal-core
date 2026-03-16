@@ -30,11 +30,12 @@
 
     {
       "type": "random",
-      "code": "SCI-DREAM-202",
-      "name": "Científicos lograron plantar ideas dentro de sueños.",
-      "desc": "Neurocientíficos de Northwestern University demostraron que los sueños pueden ser dirigidos hacia temas específicos mientras se duerme. Los sujetos despertaron con soluciones creativas a problemas que no habían podido resolver estando despiertos.",
-      "feature": "ver estudio",
-      "link": "https://www.sciencedaily.com/news/strange_offbeat/"
+      "code": "HEAD-SHOT-01",
+      "name": "Sicario apunta y dispara a un policía en la cabeza",
+      "desc": "¿Qué sucede cuando una situación de rutina se convierte en una emboscada mortal?
+En este video, exploramos emboscadas captadas en cámara, donde policías enfrentan peligrosos tiroteos. Acompañamos a los agentes en primera persona, enfrentando criminales decididos a resistirse a la justicia",
+      "feature": "ver video",
+      "link": "https://youtu.be/kAmTVcYVbMY?si=filaWQ9dlwMv1jw5"
     },
 
     {
