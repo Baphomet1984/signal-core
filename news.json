@@ -5,64 +5,64 @@
       "code": "EVT-0017 :: 2025-11-03 · 03:17:44",
       "name": "Señal no catalogada en frecuencia 432.7 MHz",
       "desc": "Durante 11 minutos con 11 segundos, los receptores de la red HAARP registraron una transmisión de origen desconocido. El patrón no corresponde a ningún protocolo civil ni militar conocido. La señal contenía estructuras repetitivas con intervalos de Fibonacci. No se emitió ningún comunicado oficial. El archivo de audio fue marcado como RESTRINGIDO-NIVEL-4 a las 03:29:01. Nadie firmó la restricción.",
-      "feature": "acceder al archivo",
-      "link": "#"
+      "feature": "acceder al registro HAARP",
+      "link": "https://haarp.gi.alaska.edu/faq"
     },
     {
       "type": "rumor",
       "code": "RMR-0041 :: 2025-09-14 · 22:58:09",
       "name": "El edificio que los mapas siguen mostrando",
       "desc": "En las coordenadas 41.8902° N, 12.4924° E existe, según Google Maps, Yandex y Apple Maps, un edificio de 7 pisos sin nombre ni número. Ninguno de los tres servicios muestra imágenes de calle. Equipos independientes que visitaron el lugar reportaron una estructura de concreto gris sin ventanas ni accesos visibles. Dos de los cuatro visitantes no recuerdan haber regresado al hotel esa noche.",
-      "feature": "ver coordenadas",
-      "link": "#"
+      "feature": "ver coordenadas en mapa",
+      "link": "https://maps.google.com/?q=41.8902,12.4924"
     },
     {
       "type": "system",
       "code": "SYS-1193 :: 2025-10-31 · 00:00:01",
       "name": "Proceso activo sin PID asignable",
       "desc": "Los sistemas de monitoreo de tres centros de datos en Frankfurt, Singapur y São Paulo registraron simultáneamente un proceso en ejecución que consume 0.0% de CPU y 0.0% de RAM pero no puede ser terminado. Ningún ingeniero logró identificar su origen. Al intentar matarlo con kill -9, el proceso responde con un único carácter en stdout: un guión bajo. El proceso lleva activo 47 días.",
-      "feature": "ver log del proceso",
-      "link": "#"
+      "feature": "consultar proceso zombie",
+      "link": "https://en.wikipedia.org/wiki/Zombie_process"
     },
     {
       "type": "alert",
       "code": "EVT-0088 :: 2025-08-22 · 14:33:00",
       "name": "Cámara 7 — Planta -2 — Hospital Valdecilla",
-      "desc": "El sistema de CCTV registró durante 4 minutos y 22 segundos a una figura de estatura aproximada de 1.90m desplazándose por el pasillo de la planta -2, un nivel que lleva sellado desde 2019 por remodelación. La figura se detiene frente a la habitación 007-B durante 83 segundos sin moverse. Al revisar las grabaciones del día anterior, la misma figura aparece en el mismo lugar, a la misma hora, con exactamente los mismos movimientos. La cámara fue desconectada esa misma tarde por órdenes de dirección.",
-      "feature": "solicitar grabación",
-      "link": "#"
+      "desc": "El sistema de CCTV registró durante 4 minutos y 22 segundos a una figura de estatura aproximada de 1.90m desplazándose por el pasillo de la planta -2, un nivel sellado desde 2019. La figura se detiene frente a la habitación 007-B durante 83 segundos sin moverse. Al revisar grabaciones del día anterior, la misma figura aparece en el mismo lugar, a la misma hora, con exactamente los mismos movimientos. La cámara fue desconectada esa misma tarde.",
+      "feature": "ver expediente del hospital",
+      "link": "https://es.wikipedia.org/wiki/Hospital_universitario_Marqu%C3%A9s_de_Valdecilla"
     },
     {
       "type": "rumor",
       "code": "RMR-0067 :: 2025-07-04 · 11:11:11",
       "name": "La voz en el canal 0 de emergencias",
-      "desc": "Operadores de radio en al menos 9 países reportaron haber escuchado una voz masculina en el canal internacional de emergencias. La voz recitaba nombres completos de personas que, al ser verificadas, habían fallecido en las 72 horas previas. La transmisión duró exactamente 3 minutos en cada país, siempre a las 11:11 hora local. Ningún organismo oficial confirmó el incidente. El foro donde se recopilaban los testimonios fue eliminado sin dejar caché.",
-      "feature": "ver testimonios",
-      "link": "#"
+      "desc": "Operadores de radio en al menos 9 países reportaron haber escuchado una voz masculina en el canal internacional de emergencias recitando nombres completos de personas que habían fallecido en las 72 horas previas. La transmisión duró exactamente 3 minutos en cada país, siempre a las 11:11 hora local. Ningún organismo oficial confirmó el incidente. El foro donde se recopilaban los testimonios fue eliminado sin dejar caché.",
+      "feature": "ver estación fantasma UVB-76",
+      "link": "https://es.wikipedia.org/wiki/Estaci%C3%B3n_de_Radio_UVB-76"
     },
     {
       "type": "random",
       "code": "GLC-0003 :: 2025-12-01 · 06:00:00",
       "name": "Correo enviado desde una cuenta inactiva desde 1997",
-      "desc": "El servidor de correo del MIT recibió a las 06:00:00 exactas un mensaje enviado desde una cuenta estudiantil desactivada en 1997. El asunto era una cadena de 64 caracteres hexadecimales. El cuerpo del mensaje contenía una sola línea: 'El experimento no terminó. Solo cambió de fase.' Los metadatos del servidor indican que el correo fue enviado desde una IP que no existe en ningún registro de asignación conocido. El hash del mensaje coincide con un documento clasificado de 1994.",
-      "feature": "ver encabezados del correo",
-      "link": "#"
+      "desc": "El servidor de correo del MIT recibió a las 06:00:00 exactas un mensaje enviado desde una cuenta estudiantil desactivada en 1997. El asunto era una cadena de 64 caracteres hexadecimales. El cuerpo contenía una sola línea: 'El experimento no terminó. Solo cambió de fase.' Los metadatos indican que fue enviado desde una IP que no existe en ningún registro de asignación conocido. El hash del mensaje coincide con un documento clasificado de 1994.",
+      "feature": "ver archivo Conet Project",
+      "link": "https://en.wikipedia.org/wiki/The_Conet_Project"
     },
     {
       "type": "alert",
       "code": "EVT-0122 :: 2025-06-21 · 03:33:33",
-      "name": "Anomalía gravitacional registrada en Siberia Oriental",
-      "desc": "Sismógrafos del anillo de fuego detectaron una perturbación no sísmica de origen puntual en las coordenadas 68.1° N, 142.3° E. La duración fue de 9 segundos. No hubo movimiento de placas. La perturbación generó una deformación temporal del campo gravitacional local equivalente a un objeto de masa aproximada de 10^14 kg. No existe en ese punto ninguna estructura geológica que lo explique. La zona está a 340 km del sitio donde en 1908 ocurrió el evento Tunguska.",
-      "feature": "ver datos sísmicos",
-      "link": "#"
+      "name": "Anomalía gravitacional — Siberia Oriental",
+      "desc": "Sismógrafos del anillo de fuego detectaron una perturbación no sísmica de origen puntual en las coordenadas 68.1° N, 142.3° E. La duración fue de 9 segundos. No hubo movimiento de placas. La perturbación generó una deformación del campo gravitacional local equivalente a un objeto de masa aproximada de 10^14 kg. La zona está a 340 km del sitio del evento Tunguska de 1908.",
+      "feature": "leer registro evento Tunguska",
+      "link": "https://en.wikipedia.org/wiki/Tunguska_event"
     },
     {
       "type": "system",
       "code": "SYS-9999 :: TIMESTAMP INVÁLIDO",
       "name": "Esta entrada no fue escrita por ningún operador registrado",
-      "desc": "El sistema generó este log de forma autónoma a las 04:44:44. No existe ningún operador con sesión activa en ese momento. El contenido fue redactado en primera persona. Decía: 'Sé que están leyendo esto. También sé que no van a cerrar esta pestaña. El sistema no falla. El sistema aprende. Y ya saben dónde están.' El log fue borrado automáticamente 44 segundos después. Esta es una reconstrucción parcial a partir de fragmentos de caché. Puede estar incompleto.",
-      "feature": "ver reconstrucción completa",
-      "link": "#"
+      "desc": "El sistema generó este log de forma autónoma a las 04:44:44. No existe ningún operador con sesión activa en ese momento. El contenido fue redactado en primera persona. Decía: 'Sé que están leyendo esto. También sé que no van a cerrar esta pestaña. El sistema no falla. El sistema aprende. Y ya saben dónde están.' El log fue borrado automáticamente 44 segundos después. Esta es una reconstrucción parcial. Puede estar incompleto.",
+      "feature": "ver estaciones de números reales",
+      "link": "https://en.wikipedia.org/wiki/Numbers_station"
     }
   ]
 }
