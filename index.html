@@ -418,13 +418,64 @@
     33% { transform: translate(1px,-1px); }
     66% { transform: translate(-1px,1px); }
   }
-  
-          footer {
-            margin-top: 4rem; text-align: center;
-            font-family: 'Share Tech Mono', monospace;
-            font-size: 0.52rem; letter-spacing: 0.15em;
-            opacity: 0.25;
-        }
+
+  /* ── TYPEWRITER INTRO ── */
+  .intro-block {
+    width: 100%;
+    max-width: 960px;
+    margin-bottom: 1.8rem;
+    padding: 1.1rem 1.4rem;
+    border: 1px solid rgba(0,229,204,0.15);
+    background: rgba(0,229,204,0.03);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .intro-block::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: linear-gradient(180deg, transparent, var(--teal), transparent);
+    animation: scanV 2.5s ease-in-out infinite;
+  }
+
+  @keyframes scanV {
+    0%   { top: -100%; }
+    100% { top: 100%; }
+  }
+
+  .intro-inner {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.72rem;
+    line-height: 1.9;
+    color: rgba(232,244,240,0.75);
+    letter-spacing: 0.04em;
+  }
+
+  .intro-prompt {
+    color: var(--teal);
+    margin-right: 0.6rem;
+    opacity: 0.7;
+    white-space: nowrap;
+  }
+
+  .intro-text {
+    color: rgba(232,244,240,0.82);
+  }
+
+  .intro-cursor {
+    color: var(--teal);
+    animation: cursorBlink 0.75s step-end infinite;
+    margin-left: 1px;
+  }
+
+  .intro-cursor.hidden { display: none; }
+
+  @keyframes cursorBlink {
+    0%,100% { opacity: 1; }
+    50%      { opacity: 0; }
+  }
 </style>
 </head>
 <body>
@@ -451,7 +502,15 @@
     </div>
   </div>
 
-  <!-- NAV -->
+  <!-- TYPEWRITER INTRO -->
+  <div class="intro-block" id="introBlock">
+    <div class="intro-inner">
+      <span class="intro-prompt">SYS://BITACORA &gt;&gt;</span>
+      <span class="intro-text" id="introText"></span><span class="intro-cursor" id="introCursor">▋</span>
+    </div>
+  </div>
+
+    <!-- NAV -->
   <div class="nav-buttons">
     <a class="nav-btn" href="https://baphomet1984.github.io/systemtag/gate/?lvl=core&go=signal-core">
       <span class="dot"></span><span>S.Core</span>
@@ -479,11 +538,11 @@
     SYSTEM LOG · hub.uplink.status : unstable · monitoring anomalies since 2025
   </div>
 </div>
-<footer>
+
 <div id="sfc1kame78eh3q1zxbrqpt1nqrumgeeda61"></div>
 <script type="text/javascript" src="https://counter1.optistats.ovh/private/counter.js?c=1kame78eh3q1zxbrqpt1nqrumgeeda61&down=async" async></script>
 <noscript><a href="https://www.contadorvisitasgratis.com" title="contador de visitas"><img src="https://counter1.optistats.ovh/private/contadorvisitasgratis.php?c=1kame78eh3q1zxbrqpt1nqrumgeeda61" border="0" title="contador de visitas" alt="contador de visitas"></a></noscript>
-</footer>
+
 <script>
 // ══════════════════════════════════════════════════════
 //  PAGE BACKGROUND — hexagonal dot field + data streams
@@ -967,6 +1026,45 @@ chaosBtn.addEventListener('click', () => {
 document.getElementById("secret-btn").addEventListener("click", () => {
   window.location.href = "https://baphomet1984.github.io/systemtag/gate/?lvl=unlkd&go=signal-unlkd";
 });
+
+// ── TYPEWRITER INTRO ────────────────────────────────────────────
+(function() {
+  const lines = [
+    "ADVERTENCIA: Los registros contenidos en esta bitácora",
+    "no han sido verificados por ninguna autoridad reconocida.",
+    "Algunos eventos siguen activos. Algunos nunca se cerraron.",
+    "Continúa bajo tu propio criterio."
+  ];
+
+  const el    = document.getElementById('introText');
+  const cur   = document.getElementById('introCursor');
+  const SPEED = 28;
+  const PAUSE = 420;
+  const LINE_BREAK = '\n';
+
+  let fullText = lines.join('\n');
+  let i = 0;
+
+  function type() {
+    if (i < fullText.length) {
+      const ch = fullText[i];
+      if (ch === '\n') {
+        el.innerHTML += '<br>';
+      } else {
+        el.innerHTML += ch;
+      }
+      i++;
+      const delay = ch === '.' || ch === ',' ? PAUSE : SPEED;
+      setTimeout(type, delay);
+    } else {
+      // done — hide cursor after a beat
+      setTimeout(() => cur.classList.add('hidden'), 1800);
+    }
+  }
+
+  // small initial delay so map loads first
+  setTimeout(type, 900);
+})();
 </script>
 </body>
 </html>
