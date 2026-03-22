@@ -602,21 +602,21 @@ const HUB_LON = -98.1277;
 
 // Bounds that lock the view to Puebla state area
 const PUEBLA_BOUNDS = L.latLngBounds(
-  [17.80, -99.10],  // SW corner
-  [20.85, -96.70]   // NE corner
+  [18.95, -98.30],   // suroeste Puebla
+  [19.15, -98.05]    // noreste Puebla
 );
 
 const map = L.map('map', {
-  center: [19.1000, -98.1500],
-  zoom: 8,
+  center: [19.0414, -98.2063],
+  zoom: 13,
   zoomControl: false,
   attributionControl: false,
   scrollWheelZoom: false,
   dragging: false,
   doubleClickZoom: false,
   touchZoom: false,
-  minZoom: 8,
-  maxZoom: 12,
+  minZoom: 12,
+  maxZoom: 16,
   maxBounds: PUEBLA_BOUNDS,
   maxBoundsViscosity: 1.0,
 });
