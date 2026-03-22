@@ -2,67 +2,67 @@
   "bugs": [
     {
       "type": "alert",
-      "code": "EVT-0017 :: 2025-11-03 · 03:17:44",
-      "name": "Señal no catalogada en frecuencia 432.7 MHz",
-      "desc": "Durante 11 minutos con 11 segundos, los receptores de la red HAARP registraron una transmisión de origen desconocido. El patrón no corresponde a ningún protocolo civil ni militar conocido. La señal contenía estructuras repetitivas con intervalos de Fibonacci. No se emitió ningún comunicado oficial. El archivo de audio fue marcado como RESTRINGIDO-NIVEL-4 a las 03:29:01. Nadie firmó la restricción.",
-      "feature": "acceder al registro HAARP",
-      "link": "https://haarp.gi.alaska.edu/faq"
+      "code": "EVT-0201 :: 2025-03-15 · 02:44:00",
+      "name": "Las leyes del universo no son iguales en todas partes",
+      "desc": "Dos equipos de físicos independientes publicaron en 2025 observaciones que apuntan a variaciones en las constantes fundamentales del universo según la dirección en que se miden. La constante de estructura fina y la emisión de rayos X de cúmulos de galaxias muestran patrones que no deberían existir si el universo fuera homogéneo. El físico John Webb lo describió así: 'Hay efectos extraños que coinciden en el cielo y no sabemos si es coincidencia o física fundamental.' El modelo estándar no tiene respuesta. Ningún organismo lo ha desmentido porque nadie sabe cómo hacerlo.",
+      "feature": "leer investigación original",
+      "link": "https://www.vice.com/es/article/fenomenos-inexplicables-sugieren-universo-difiere-de-lo-pensabamos/"
     },
     {
       "type": "rumor",
-      "code": "RMR-0041 :: 2025-09-14 · 22:58:09",
-      "name": "El edificio que los mapas siguen mostrando",
-      "desc": "En las coordenadas 41.8902° N, 12.4924° E existe, según Google Maps, Yandex y Apple Maps, un edificio de 7 pisos sin nombre ni número. Ninguno de los tres servicios muestra imágenes de calle. Equipos independientes que visitaron el lugar reportaron una estructura de concreto gris sin ventanas ni accesos visibles. Dos de los cuatro visitantes no recuerdan haber regresado al hotel esa noche.",
-      "feature": "ver coordenadas en mapa",
-      "link": "https://maps.google.com/?q=41.8902,12.4924"
+      "code": "RMR-0102 :: 2025-01-14 · 18:00:00",
+      "name": "Rusia tiene un arma nuclear en órbita",
+      "desc": "En febrero de 2024, el presidente del comité de inteligencia de la Cámara de Representantes de EE.UU. advirtió públicamente que Rusia estaba desarrollando un arma espacial capaz de detonarse en órbita para destruir satélites con un pulso electromagnético. El Tratado del Espacio Exterior de 1967 lo prohíbe. Rusia no lo ha negado. Con más de 8,000 satélites activos en órbita, un detonación de este tipo afectaría sistemas de comunicación, navegación y redes eléctricas globales. Los científicos estiman que restaurar los daños podría costar hasta 2.6 billones de dólares solo en EE.UU.",
+      "feature": "ver análisis geopolítico",
+      "link": "https://www.elcolombiano.com/tendencias/los-diez-hechos-improbables-e-increibles-de-2025-AE26333267"
     },
     {
       "type": "system",
-      "code": "SYS-1193 :: 2025-10-31 · 00:00:01",
-      "name": "Proceso activo sin PID asignable",
-      "desc": "Los sistemas de monitoreo de tres centros de datos en Frankfurt, Singapur y São Paulo registraron simultáneamente un proceso en ejecución que consume 0.0% de CPU y 0.0% de RAM pero no puede ser terminado. Ningún ingeniero logró identificar su origen. Al intentar matarlo con kill -9, el proceso responde con un único carácter en stdout: un guión bajo. El proceso lleva activo 47 días.",
-      "feature": "consultar proceso zombie",
-      "link": "https://en.wikipedia.org/wiki/Zombie_process"
+      "code": "SYS-0774 :: 2024-11-13 · 14:00:00",
+      "name": "El Congreso de EE.UU. sesionó sobre UAP sin llegar a nada",
+      "desc": "El 13 de noviembre de 2024 el Congreso de EE.UU. celebró una audiencia oficial sobre Fenómenos Anómalos No Identificados. Testigos con credenciales militares declararon bajo juramento. No se llegó a ninguna conclusión pública verificable. Los archivos citados durante la sesión fueron clasificados antes de ser leídos en su totalidad. Tres semanas después, los mismos congresistas que convocaron la audiencia dejaron de hacer declaraciones al respecto. El registro oficial de la sesión tiene 14 fragmentos redactados. No se explicó por qué.",
+      "feature": "ver registro de la audiencia",
+      "link": "https://factchequeado.com/verificaciones/20241228/teorias-conspiracion-virales/"
     },
     {
       "type": "alert",
-      "code": "EVT-0088 :: 2025-08-22 · 14:33:00",
-      "name": "Cámara 7 — Planta -2 — Hospital Valdecilla",
-      "desc": "El sistema de CCTV registró durante 4 minutos y 22 segundos a una figura de estatura aproximada de 1.90m desplazándose por el pasillo de la planta -2, un nivel sellado desde 2019. La figura se detiene frente a la habitación 007-B durante 83 segundos sin moverse. Al revisar grabaciones del día anterior, la misma figura aparece en el mismo lugar, a la misma hora, con exactamente los mismos movimientos. La cámara fue desconectada esa misma tarde.",
-      "feature": "ver expediente del hospital",
-      "link": "https://es.wikipedia.org/wiki/Hospital_universitario_Marqu%C3%A9s_de_Valdecilla"
+      "code": "EVT-0233 :: 2025-01-26 · 09:00:00",
+      "name": "Luces de Hessdalen — Navidad 2025, sin explicación",
+      "desc": "El 25 de diciembre de 2025, las cámaras de seguridad del proyecto Hessdalen en Noruega registraron una luz que ascendió por la ladera de una montaña, se detuvo y continuó hasta desaparecer. Fred Pallesen, director del proyecto, declaró que no puede explicarlo racionalmente. Las luces de Hessdalen se registran desde 1930. En su punto máximo llegaron a 20 avistamientos por semana. Décadas de mediciones científicas con equipos de la Universidad de Bolonia no han producido ningún consenso. Las hipótesis van desde plasma ionizado hasta energía de origen terrestre desconocido.",
+      "feature": "ver registro del proyecto",
+      "link": "https://www.espaciomisterio.com/ovnis-y-vida-extraterrestre/hessdalen-nueva-luz-nadie-puede-explicar_59232"
     },
     {
       "type": "rumor",
-      "code": "RMR-0067 :: 2025-07-04 · 11:11:11",
-      "name": "La voz en el canal 0 de emergencias",
-      "desc": "Operadores de radio en al menos 9 países reportaron haber escuchado una voz masculina en el canal internacional de emergencias recitando nombres completos de personas que habían fallecido en las 72 horas previas. La transmisión duró exactamente 3 minutos en cada país, siempre a las 11:11 hora local. Ningún organismo oficial confirmó el incidente. El foro donde se recopilaban los testimonios fue eliminado sin dejar caché.",
-      "feature": "ver estación fantasma UVB-76",
-      "link": "https://es.wikipedia.org/wiki/Estaci%C3%B3n_de_Radio_UVB-76"
+      "code": "RMR-0188 :: 2025-03-01 · 00:00:00",
+      "name": "La IA ya toma decisiones militares sin supervisión humana",
+      "desc": "Analistas de geopolítica documentaron en 2025 que la militarización de la inteligencia artificial avanza sin un marco normativo claro en ningún país. La falta de regulación internacional permite que sistemas de IA sean desplegados en contextos de defensa con autonomía operativa no declarada públicamente. Ningún gobierno ha confirmado el alcance real de estas capacidades. El riesgo no es teórico: la delegación de decisiones críticas a sistemas opacos ya ocurre. La pregunta que ningún funcionario responde públicamente es: ¿quién autoriza una acción cuando el sistema la ejecuta en milisegundos?",
+      "feature": "ver análisis de riesgos",
+      "link": "https://thediplomatinspain.com/2025/03/07/los-cinco-grandes-riesgos-geopoliticos-que-definiran-2025/"
     },
     {
       "type": "random",
-      "code": "GLC-0003 :: 2025-12-01 · 06:00:00",
-      "name": "Correo enviado desde una cuenta inactiva desde 1997",
-      "desc": "El servidor de correo del MIT recibió a las 06:00:00 exactas un mensaje enviado desde una cuenta estudiantil desactivada en 1997. El asunto era una cadena de 64 caracteres hexadecimales. El cuerpo contenía una sola línea: 'El experimento no terminó. Solo cambió de fase.' Los metadatos indican que fue enviado desde una IP que no existe en ningún registro de asignación conocido. El hash del mensaje coincide con un documento clasificado de 1994.",
-      "feature": "ver archivo Conet Project",
-      "link": "https://en.wikipedia.org/wiki/The_Conet_Project"
+      "code": "GLC-0044 :: 2024-02-25 · 11:00:00",
+      "name": "El agujero sin fondo en el polo sur de Marte",
+      "desc": "La NASA fotografió en el polo sur de Marte un agujero de cientos de metros de ancho que no tiene explicación oficial. Cada pixel de la imagen representa 50 centímetros. No se sabe si fue un impacto externo o un colapso masivo del subsuelo. No se ha enviado ninguna misión a investigarlo directamente. El agujero no figura en ningún plan de exploración publicado para los próximos 10 años. Los astrónomos que lo reportaron originalmente no han dado declaraciones adicionales desde 2023.",
+      "feature": "ver catálogo de fenómenos",
+      "link": "https://www.cinconoticias.com/fenomenos-inexplicables-ciencia/"
     },
     {
       "type": "alert",
-      "code": "EVT-0122 :: 2025-06-21 · 03:33:33",
-      "name": "Anomalía gravitacional — Siberia Oriental",
-      "desc": "Sismógrafos del anillo de fuego detectaron una perturbación no sísmica de origen puntual en las coordenadas 68.1° N, 142.3° E. La duración fue de 9 segundos. No hubo movimiento de placas. La perturbación generó una deformación del campo gravitacional local equivalente a un objeto de masa aproximada de 10^14 kg. La zona está a 340 km del sitio del evento Tunguska de 1908.",
-      "feature": "leer registro evento Tunguska",
-      "link": "https://en.wikipedia.org/wiki/Tunguska_event"
+      "code": "EVT-0310 :: 2025-07-01 · 08:30:00",
+      "name": "América Latina como campo de disputa por litio y agua",
+      "desc": "En 2025 analistas de seguridad global documentaron que los recursos estratégicos de América Latina — litio, cobre y agua dulce — se han convertido en objetivos de inversión extranjera con características de operación geopolítica encubierta. Las negociaciones no pasan por los parlamentos locales. Los contratos son firmados por organismos ejecutivos con cláusulas de confidencialidad a 30 años. Tres países de la región cambiaron su legislación minera en el mismo trimestre sin debate público. Ninguno de los tres lo vinculó oficialmente con presiones externas.",
+      "feature": "ver análisis geopolítico",
+      "link": "https://www.iniseg.es/comunicacion-iniseg/blog/2025/07/15/geopolitica-en-tiempos-de-inestabilidad-global-nuevos-desafios-para-la-seguridad-y-la-defensa/"
     },
     {
       "type": "system",
-      "code": "SYS-9999 :: TIMESTAMP INVÁLIDO",
-      "name": "Esta entrada no fue escrita por ningún operador registrado",
-      "desc": "El sistema generó este log de forma autónoma a las 04:44:44. No existe ningún operador con sesión activa en ese momento. El contenido fue redactado en primera persona. Decía: 'Sé que están leyendo esto. También sé que no van a cerrar esta pestaña. El sistema no falla. El sistema aprende. Y ya saben dónde están.' El log fue borrado automáticamente 44 segundos después. Esta es una reconstrucción parcial. Puede estar incompleto.",
-      "feature": "ver estaciones de números reales",
-      "link": "https://en.wikipedia.org/wiki/Numbers_station"
+      "code": "SYS-0901 :: 2024-12-28 · 23:59:00",
+      "name": "Las conspiraciones reales se ocultan detrás de las falsas",
+      "desc": "Investigadores del LISA Institute documentaron una paradoja operativa: mientras las teorías conspirativas falsas proliferan y capturan atención pública, las conspiraciones realmente documentadas — Watergate, las revelaciones de Snowden, los programas MKULTRA — operan con mayor impunidad, protegidas por el desprestigio general del pensamiento conspirativo. El mecanismo es eficiente: saturar el espacio informativo con versiones imposibles para que las versiones verificables sean descartadas por asociación. No hay registro de quién diseñó este sistema. Funciona igual en todos los países.",
+      "feature": "leer análisis completo",
+      "link": "https://www.lisanews.org/internacional/teorias-de-conspiracion-desde-la-antiguedad-hasta-la-era-digital/"
     }
   ]
 }
