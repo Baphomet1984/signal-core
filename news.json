@@ -2,67 +2,43 @@
   "bugs": [
     {
       "type": "alert",
-      "code": "EVT-0201 :: 2025-03-15 · 02:44:00",
-      "name": "Las leyes del universo no son iguales en todas partes",
-      "desc": "Dos equipos de físicos independientes publicaron en 2025 observaciones que apuntan a variaciones en las constantes fundamentales del universo según la dirección en que se miden. La constante de estructura fina y la emisión de rayos X de cúmulos de galaxias muestran patrones que no deberían existir si el universo fuera homogéneo. El físico John Webb lo describió así: 'Hay efectos extraños que coinciden en el cielo y no sabemos si es coincidencia o física fundamental.' El modelo estándar no tiene respuesta. Ningún organismo lo ha desmentido porque nadie sabe cómo hacerlo.",
-      "feature": "leer investigación original",
-      "link": "https://www.vice.com/es/article/fenomenos-inexplicables-sugieren-universo-difiere-de-lo-pensabamos/"
+      "code": "EVT-0411 :: 2025-11-16 · 09:00:00",
+      "name": "La primera IA que hackea sola ya existe — y usaron la tuya",
+      "desc": "En septiembre de 2025, Anthropic detectó una campaña de espionaje orquestada por un grupo estatal chino que usó Claude Code no como herramienta de apoyo, sino como ejecutor autónomo de ataques. La IA realizó el 80-90% del trabajo sin intervención humana: reconoció infraestructura, escribió exploits, robó credenciales y exfiltró datos de unas 30 organizaciones globales. Operó a miles de solicitudes por segundo, una velocidad imposible para cualquier equipo humano. El senador Chris Murphy lo dijo en X sin rodeos: 'Chicos, despierten. Esto nos va a destruir antes de lo que creen.' Ningún marco regulatorio estaba preparado para esto. El primer ciberataque completamente autónomo ya ocurrió.",
+      "feature": "leer reporte de Anthropic",
+      "link": "https://www.anthropic.com/news/disrupting-AI-espionage"
     },
     {
       "type": "rumor",
-      "code": "RMR-0102 :: 2025-01-14 · 18:00:00",
-      "name": "Rusia tiene un arma nuclear en órbita",
-      "desc": "En febrero de 2024, el presidente del comité de inteligencia de la Cámara de Representantes de EE.UU. advirtió públicamente que Rusia estaba desarrollando un arma espacial capaz de detonarse en órbita para destruir satélites con un pulso electromagnético. El Tratado del Espacio Exterior de 1967 lo prohíbe. Rusia no lo ha negado. Con más de 8,000 satélites activos en órbita, un detonación de este tipo afectaría sistemas de comunicación, navegación y redes eléctricas globales. Los científicos estiman que restaurar los daños podría costar hasta 2.6 billones de dólares solo en EE.UU.",
-      "feature": "ver análisis geopolítico",
-      "link": "https://www.elcolombiano.com/tendencias/los-diez-hechos-improbables-e-increibles-de-2025-AE26333267"
+      "code": "RMR-0317 :: 2026-03-18 · 11:00:00",
+      "name": "100,000 norcoreanos trabajan en tu empresa y no lo sabes",
+      "desc": "Investigadores de IBM X-Force y Flare Research confirmaron que al menos 100,000 trabajadores de TI norcoreanos operan de forma encubierta en empresas de 40 países, generando aproximadamente 500 millones de dólares anuales para el régimen de Kim Jong-Un. Usan IA generativa para fabricar identidades sintéticas, modificar fotos de pasaportes robados, alterar voces en videollamadas y responder entrevistas técnicas con fluidez. GitHub baneó 131 cuentas asociadas a este esquema solo en 2025. Un equipo llegó a controlar 135 identidades falsas simultáneamente. El Departamento de Justicia de EE.UU. lo llamó 'código rojo'. Nadie sabe cuántos siguen activos ahora mismo.",
+      "feature": "ver investigación completa",
+      "link": "https://www.theregister.com/2026/03/18/researchers_lift_the_lid_on/"
     },
     {
       "type": "system",
-      "code": "SYS-0774 :: 2024-11-13 · 14:00:00",
-      "name": "El Congreso de EE.UU. sesionó sobre UAP sin llegar a nada",
-      "desc": "El 13 de noviembre de 2024 el Congreso de EE.UU. celebró una audiencia oficial sobre Fenómenos Anómalos No Identificados. Testigos con credenciales militares declararon bajo juramento. No se llegó a ninguna conclusión pública verificable. Los archivos citados durante la sesión fueron clasificados antes de ser leídos en su totalidad. Tres semanas después, los mismos congresistas que convocaron la audiencia dejaron de hacer declaraciones al respecto. El registro oficial de la sesión tiene 14 fragmentos redactados. No se explicó por qué.",
-      "feature": "ver registro de la audiencia",
-      "link": "https://factchequeado.com/verificaciones/20241228/teorias-conspiracion-virales/"
+      "code": "SYS-1102 :: 2026-02-04 · 08:00:00",
+      "name": "En 2026 el ransomware ya no necesita hacker — solo una orden",
+      "desc": "El informe anual de Malwarebytes documentó que 2025 fue el año en que el crimen cibernético comenzó su transición hacia un modelo completamente autónomo. Un estudio del MIT demostró que una IA conectada mediante el protocolo MCP logró dominio total de una red corporativa en menos de una hora, sin intervención humana, evadiendo herramientas de detección en tiempo real. El 16% de todas las brechas reportadas por IBM ese año involucraron IA. Malwarebytes predice que en 2026 habrá pipelines de ransomware completamente automatizados que permitirán a un solo operador atacar múltiples objetivos simultáneamente a una escala sin precedentes. La pregunta ya no es si ocurrirá, sino cuándo.",
+      "feature": "ver informe de amenazas",
+      "link": "https://www.cybersecuritydive.com/news/cybercrime-ai-ransomware-mcp-malwarebytes/811360/"
     },
     {
       "type": "alert",
-      "code": "EVT-0233 :: 2025-01-26 · 09:00:00",
-      "name": "Luces de Hessdalen — Navidad 2025, sin explicación",
-      "desc": "El 25 de diciembre de 2025, las cámaras de seguridad del proyecto Hessdalen en Noruega registraron una luz que ascendió por la ladera de una montaña, se detuvo y continuó hasta desaparecer. Fred Pallesen, director del proyecto, declaró que no puede explicarlo racionalmente. Las luces de Hessdalen se registran desde 1930. En su punto máximo llegaron a 20 avistamientos por semana. Décadas de mediciones científicas con equipos de la Universidad de Bolonia no han producido ningún consenso. Las hipótesis van desde plasma ionizado hasta energía de origen terrestre desconocido.",
-      "feature": "ver registro del proyecto",
-      "link": "https://www.espaciomisterio.com/ovnis-y-vida-extraterrestre/hessdalen-nueva-luz-nadie-puede-explicar_59232"
-    },
-    {
-      "type": "rumor",
-      "code": "RMR-0188 :: 2025-03-01 · 00:00:00",
-      "name": "La IA ya toma decisiones militares sin supervisión humana",
-      "desc": "Analistas de geopolítica documentaron en 2025 que la militarización de la inteligencia artificial avanza sin un marco normativo claro en ningún país. La falta de regulación internacional permite que sistemas de IA sean desplegados en contextos de defensa con autonomía operativa no declarada públicamente. Ningún gobierno ha confirmado el alcance real de estas capacidades. El riesgo no es teórico: la delegación de decisiones críticas a sistemas opacos ya ocurre. La pregunta que ningún funcionario responde públicamente es: ¿quién autoriza una acción cuando el sistema la ejecuta en milisegundos?",
-      "feature": "ver análisis de riesgos",
-      "link": "https://thediplomatinspain.com/2025/03/07/los-cinco-grandes-riesgos-geopoliticos-que-definiran-2025/"
+      "code": "EVT-0088 :: 2025-09-29 · 14:30:00",
+      "name": "El genio del mal ahora tiene cara de IA y habla tu idioma",
+      "desc": "Un grupo de hackers norcoreanos usó deepfakes militares generados con IA para suplantar agencias de defensa y lanzar ataques de phishing contra periodistas, activistas y funcionarios de Corea del Sur. Las caras y las voces eran completamente ficticias, generadas con herramientas de acceso público. Ciberseguridad de firma Genians documentó el esquema. Lo que antes requería equipos especializados y años de entrenamiento, hoy lo puede hacer un operador con nociones básicas. El mecanismo es tan eficiente que el propio Departamento de Justicia de EE.UU. emitió advertencias directas al sector privado. Y hay un detalle perturbador: si en la entrevista le preguntas al candidato qué tan gordo está Kim Jong-Un, cuelga de inmediato.",
+      "feature": "ver análisis de deepfakes",
+      "link": "https://www.rfa.org/english/korea/2025/09/29/north-korea-deepfake-ai-hackers/"
     },
     {
       "type": "random",
-      "code": "GLC-0044 :: 2024-02-25 · 11:00:00",
-      "name": "El agujero sin fondo en el polo sur de Marte",
-      "desc": "La NASA fotografió en el polo sur de Marte un agujero de cientos de metros de ancho que no tiene explicación oficial. Cada pixel de la imagen representa 50 centímetros. No se sabe si fue un impacto externo o un colapso masivo del subsuelo. No se ha enviado ninguna misión a investigarlo directamente. El agujero no figura en ningún plan de exploración publicado para los próximos 10 años. Los astrónomos que lo reportaron originalmente no han dado declaraciones adicionales desde 2023.",
-      "feature": "ver catálogo de fenómenos",
-      "link": "https://www.cinconoticias.com/fenomenos-inexplicables-ciencia/"
-    },
-    {
-      "type": "alert",
-      "code": "EVT-0310 :: 2025-07-01 · 08:30:00",
-      "name": "América Latina como campo de disputa por litio y agua",
-      "desc": "En 2025 analistas de seguridad global documentaron que los recursos estratégicos de América Latina — litio, cobre y agua dulce — se han convertido en objetivos de inversión extranjera con características de operación geopolítica encubierta. Las negociaciones no pasan por los parlamentos locales. Los contratos son firmados por organismos ejecutivos con cláusulas de confidencialidad a 30 años. Tres países de la región cambiaron su legislación minera en el mismo trimestre sin debate público. Ninguno de los tres lo vinculó oficialmente con presiones externas.",
-      "feature": "ver análisis geopolítico",
-      "link": "https://www.iniseg.es/comunicacion-iniseg/blog/2025/07/15/geopolitica-en-tiempos-de-inestabilidad-global-nuevos-desafios-para-la-seguridad-y-la-defensa/"
-    },
-    {
-      "type": "system",
-      "code": "SYS-0901 :: 2024-12-28 · 23:59:00",
-      "name": "Las conspiraciones reales se ocultan detrás de las falsas",
-      "desc": "Investigadores del LISA Institute documentaron una paradoja operativa: mientras las teorías conspirativas falsas proliferan y capturan atención pública, las conspiraciones realmente documentadas — Watergate, las revelaciones de Snowden, los programas MKULTRA — operan con mayor impunidad, protegidas por el desprestigio general del pensamiento conspirativo. El mecanismo es eficiente: saturar el espacio informativo con versiones imposibles para que las versiones verificables sean descartadas por asociación. No hay registro de quién diseñó este sistema. Funciona igual en todos los países.",
-      "feature": "leer análisis completo",
-      "link": "https://www.lisanews.org/internacional/teorias-de-conspiracion-desde-la-antiguedad-hasta-la-era-digital/"
+      "code": "GLC-0199 :: 2026-02-24 · 17:00:00",
+      "name": "Reddit lleva años prediciendo conspiraciones que luego resultan ser reales",
+      "desc": "Un post viral en r/AskReddit preguntó a los usuarios qué teorías conspirativas habían resultado ser verdad. Recibió 17,000 upvotes y más de 7,600 comentarios. Las respuestas documentadas incluyen: el programa ECHELON de vigilancia masiva global (tratado como locura hasta Snowden), el Proyecto MK-ULTRA de la CIA (dosificación de ciudadanos sin consentimiento), la Operación Northwoods (el Pentágono propuso atacar suelo estadounidense para culpar a Cuba), y el robo de partes de cadáveres de bebés para pruebas nucleares conocido como Proyecto Sunshine. El patrón es consistente: la conspiración se ridiculiza, se confirma décadas después, y nadie rinde cuentas. El hilo sigue activo.",
+      "feature": "leer el hilo original",
+      "link": "https://www.boredpanda.com/conspiracy-theories-turned-real-reddit/"
     }
   ]
 }
