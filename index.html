@@ -476,6 +476,188 @@
     0%,100% { opacity: 1; }
     50%      { opacity: 0; }
   }
+         /* ══════════════════════════════════════════════
+           PODCAST PANEL DESLIZANTE — LATERAL DERECHO
+        ══════════════════════════════════════════════ */
+        #podcast-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 999;
+        }
+        #podcast-overlay.active { display: block; }
+
+        #podcast-panel {
+
+    position: fixed;
+    top: 120px;   /* BAJA el panel debajo del avatar */
+    right: 0;
+
+    transform: translateX(calc(100% - 42px));
+
+    width: 430px;
+    max-width: 94vw;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: flex-start;
+
+    transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+}
+      
+       #podcast-panel.open {
+    transform: translateX(0);
+}
+
+        #podcast-tab {
+            width: 42px;
+            height: clamp(80px, 28vh, 160px);
+            flex-shrink: 0;
+            align-self: flex-start;
+            position: sticky;
+            top: calc(50vh - 80px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            padding: 0;
+            cursor: pointer;
+            user-select: none;
+            border-radius: 8px 0 0 8px;
+            background: rgba(0, 0, 0, 0.18);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 215, 0, 0.55);
+            border-right: none;
+            box-shadow: -2px 0 16px rgba(255,215,0,0.18), inset 0 0 12px rgba(255,215,0,0.04);
+            overflow: hidden;
+        }
+
+        #podcast-tab .tab-text { display: none; }
+
+        #podcast-tab .tab-icon {
+            display: block;
+            font-size: 1.3rem;
+            color: rgba(255, 215, 0, 1);
+            text-shadow:
+                0 0 8px  rgba(255,215,0,1),
+                0 0 18px rgba(255,200,0,0.8),
+                0 0 32px rgba(255,180,0,0.4);
+            animation: pcTabPulse 2.5s ease-in-out infinite;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes pcTabPulse {
+            0%,100% { transform: scale(1);   text-shadow: 0 0 8px rgba(255,215,0,1), 0 0 18px rgba(255,200,0,0.8), 0 0 32px rgba(255,180,0,0.4); }
+            50%      { transform: scale(0.9); text-shadow: 0 0 4px rgba(255,215,0,0.7), 0 0 10px rgba(255,200,0,0.5); }
+        }
+
+        #podcast-content {
+            flex: 1;
+            background: rgba(5,5,8,0.97);
+            border: 1px solid rgba(255,215,0,0.22);
+            border-right: none;
+            padding: 1.3rem 1.1rem 1.3rem 1rem;
+            overflow-y: auto;
+            max-height: 96vh;
+            height: 96vh;
+            display: flex;
+            flex-direction: column;
+            gap: 1.1rem;
+            position: relative;
+        }
+
+        #podcast-content::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #FFD700 40%, transparent);
+        }
+
+        #podcast-content::before {
+            content: 'PODCAST_STREAM';
+            position: absolute; top: -0.52rem; left: 0.9rem;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.46rem; letter-spacing: 0.22em;
+            color: #FFD700; background: #050508;
+            padding: 0 0.5rem;
+            opacity: 0.85;
+        }
+
+        .podcast-panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 0.7rem;
+            border-bottom: 1px solid rgba(255,215,0,0.12);
+            flex-shrink: 0;
+        }
+
+        .podcast-panel-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 0.65rem;
+            color: #FFD700;
+            letter-spacing: 0.22em;
+            text-shadow: 0 0 10px rgba(255,215,0,0.45);
+        }
+
+        .podcast-close-btn {
+            background: none;
+            border: 1px solid rgba(255,215,0,0.28);
+            color: #FFD700;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.58rem;
+            cursor: pointer;
+            padding: 3px 8px;
+            letter-spacing: 0.12em;
+            transition: all 0.2s;
+        }
+        .podcast-close-btn:hover {
+            background: rgba(255,215,0,0.1);
+            box-shadow: 0 0 8px rgba(255,215,0,0.3);
+        }
+
+        .podcast-label {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 0.5rem;
+            letter-spacing: 0.2em;
+            color: #FFD700;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 0.35rem;
+            display: block;
+        }
+
+        .podcast-item {
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            transform: translateX(18px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            flex-shrink: 0;
+        }
+
+        #podcast-panel.open .podcast-item:nth-child(2) { opacity:1; transform:none; transition-delay:0.12s; }
+        #podcast-panel.open .podcast-item:nth-child(3) { opacity:1; transform:none; transition-delay:0.22s; }
+        #podcast-panel.open .podcast-item:nth-child(4) { opacity:1; transform:none; transition-delay:0.32s; }
+
+        .podcast-item iframe {
+            width: 100%;
+            border-radius: 3px;
+            border: 1px solid rgba(255,215,0,0.1);
+            box-shadow: 0 0 10px rgba(255,215,0,0.04);
+            transition: box-shadow 0.3s;
+            display: block;
+        }
+        .podcast-item iframe:hover { box-shadow: 0 0 20px rgba(255,215,0,0.14); }
+
+        #podcast-content::-webkit-scrollbar { width: 3px; }
+        #podcast-content::-webkit-scrollbar-track { background: rgba(255,215,0,0.04); }
+        #podcast-content::-webkit-scrollbar-thumb { background: rgba(255,215,0,0.28); border-radius: 2px; }
+
 </style>
 </head>
 <body>
@@ -484,6 +666,38 @@
 <canvas id="bgCanvas"></canvas>
 
 <div class="stage">
+
+  <!-- ══ PODCAST PANEL LATERAL DERECHO ══ -->
+<div id="podcast-overlay"></div>
+<div id="podcast-panel">
+    <div id="podcast-tab" title="Ver / cerrar Podcasts">
+        <span class="tab-icon">🎙</span>
+        <span class="tab-text">Podcasts</span>
+        <canvas id="tab-glow-canvas" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;border-radius:8px 0 0 8px;"></canvas>
+    </div>
+    <div id="podcast-content">
+        <div class="podcast-panel-header">
+            <span class="podcast-panel-title">// Podcast Feed</span>
+            <button class="podcast-close-btn" id="podcast-close">[ X ]</button>
+        </div>
+        <div class="podcast-item">
+            <span class="podcast-label">// Las Bromas del Panda Show</span>
+            <iframe src="https://widget.spreaker.com/player?show_id=6247023&theme=dark&playlist=show&playlist-continuous=true&chapters-image=true"
+                width="100%" height="400px" title="el panda show" frameborder="0"></iframe>
+        </div>
+        <div class="podcast-item">
+            <span class="podcast-label">// Podcast: Crimen y Castigo</span>
+            <iframe src="https://widget.spreaker.com/player?show_id=6671022&theme=light&playlist=show&playlist-continuous=false&chapters-image=true&episode_image_position=right&hide-logo=false&hide-likes=false&hide-comments=false&hide-sharing=false&hide-download=true"
+                width="100%" height="400px" title="CRIME AND PUNISHMENT" frameborder="0"></iframe>
+        </div>
+        <div class="podcast-item">
+            <span class="podcast-label">// Podcast Psicocatarsis</span>
+            <iframe src="https://widget.spreaker.com/player?show_id=6719012&theme=dark&playlist=show&playlist-continuous=true&chapters-image=true&episode_image_position=right&hide-logo=false&hide-likes=false&hide-comments=false&hide-sharing=false&hide-download=true"
+                width="100%" height="400px" title="PSICOCATARSIS." frameborder="0"></iframe>
+        </div>
+    </div>
+</div>
+<!-- ══ FIN PODCAST PANEL ══ -->
 
   <!-- ══ HEADER BLOCK ══ -->
   <div class="header-block">
@@ -1064,6 +1278,72 @@ document.getElementById("secret-btn").addEventListener("click", () => {
 
   // small initial delay so map loads first
   setTimeout(type, 900);
+})();
+  // ── PODCAST PANEL ─────────────────────────────────────────────────
+(function(){
+    const pcPanel   = document.getElementById('podcast-panel');
+    const pcTab     = document.getElementById('podcast-tab');
+    const pcClose   = document.getElementById('podcast-close');
+    const pcOverlay = document.getElementById('podcast-overlay');
+
+    function openPanel()  { pcPanel.classList.add('open');    pcOverlay.classList.add('active');    }
+    function closePanel() { pcPanel.classList.remove('open'); pcOverlay.classList.remove('active'); }
+
+    pcTab.addEventListener('click',    () => pcPanel.classList.contains('open') ? closePanel() : openPanel());
+    pcClose.addEventListener('click',  closePanel);
+    pcOverlay.addEventListener('click', closePanel);
+
+    /* Luz dorada recorriendo el contorno */
+    const gc    = document.getElementById('tab-glow-canvas');
+    const gCtx  = gc.getContext('2d');
+    let gW, gH;
+
+    function resizeGC(){
+        gW = gc.width  = pcTab.offsetWidth  || 42;
+        gH = gc.height = pcTab.offsetHeight || 120;
+    }
+    resizeGC();
+    window.addEventListener('resize', resizeGC);
+
+    const PERIOD = 5000, SPARK = 0.22;
+
+    function perimPt(d, w, h){
+        d = ((d % (2*(w+h))) + 2*(w+h)) % (2*(w+h));
+        if (d < w)  return [d,   0  ];  d -= w;
+        if (d < h)  return [w,   d  ];  d -= h;
+        if (d < w)  return [w-d, h  ];  d -= w;
+                    return [0,   h-d];
+    }
+
+    function drawGlow(ts){
+        if(!gW || !gH) resizeGC();
+        gCtx.clearRect(0, 0, gW, gH);
+        const perim    = 2 * (gW + gH);
+        const sparkLen = perim * SPARK;
+        const headPos  = ((ts % PERIOD) / PERIOD) * perim;
+        const SEG      = 70;
+        gCtx.save();
+        for(let i = 0; i < SEG; i++){
+            const t  = i / SEG;
+            const d1 = (headPos - t * sparkLen + perim * 4) % perim;
+            const d2 = (headPos - (t + 1/SEG) * sparkLen + perim * 4) % perim;
+            const [x1,y1] = perimPt(d1, gW, gH);
+            const [x2,y2] = perimPt(d2, gW, gH);
+            const alpha  = Math.pow(1 - t, 1.4);
+            const bright = 1 - t * 0.4;
+            gCtx.beginPath();
+            gCtx.moveTo(x1, y1);
+            gCtx.lineTo(x2, y2);
+            gCtx.strokeStyle = `rgba(255,${Math.round(200+bright*55)},${Math.round(bright*40)},${alpha.toFixed(2)})`;
+            gCtx.lineWidth   = 2.5;
+            gCtx.shadowColor = `rgba(255,220,0,${(alpha*0.85).toFixed(2)})`;
+            gCtx.shadowBlur  = 12;
+            gCtx.stroke();
+        }
+        gCtx.restore();
+        requestAnimationFrame(drawGlow);
+    }
+    requestAnimationFrame(drawGlow);
 })();
 </script>
 </body>
