@@ -394,15 +394,23 @@
     max-width: 500px; line-height: 1.9; letter-spacing: 0.06em;
   }
 
-  .hidden-btn {
-    position: fixed; bottom: 5px; right: 5px;
-    opacity: 0; pointer-events: none;
-    font-size: 14px; background: none; border: none;
-    color: var(--teal); cursor: pointer; transition: opacity 0.4s;
-    font-family: 'Share Tech Mono', monospace;
-  }
-  .hidden-btn.show { opacity: 0.2; pointer-events: auto; }
-  .hidden-btn.show:hover { opacity: 1; }
+ .hidden-btn {
+  opacity: 0;
+  pointer-events: none;
+  font-size: 0.62rem;
+  background: none;
+  border: 1px solid rgba(0,229,204,0.3);
+  color: var(--teal);
+  cursor: pointer;
+  transition: opacity 0.4s;
+  font-family: 'Share Tech Mono', monospace;
+  letter-spacing: 0.2em;
+  padding: 0.55rem 1.8rem;
+  margin-top: 0.6rem;
+  display: block;
+}
+.hidden-btn.show { opacity: 0.35; pointer-events: auto; }
+.hidden-btn.show:hover { opacity: 1; box-shadow: 0 0 14px rgba(0,229,204,0.3); }
 
   body.chaos .glitch-title { animation: shake 0.1s infinite; }
   @keyframes shake {
@@ -761,9 +769,8 @@ animation-delay:4s;
     <button class="chaos-btn" id="chaosBtn">⚡ DESCUBRE UNA FALLA</button>
     <div class="chaos-message" id="chaosMsg">// error inesperado... o ¿feature?</div>
     <div class="counter" id="counter">0 bugs revelados</div>
-  </div>
-
-  <button id="secret-btn" class="hidden-btn">→ ∴</button>
+    <button id="secret-btn" class="hidden-btn">→ ∴</button>
+  </div> <!-- fin chaos-zone -->
 
   <div class="footer-quote">
     "El sistema humano sigue fallando."<br>
