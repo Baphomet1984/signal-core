@@ -3,42 +3,42 @@
     {
       "type": "alert",
       "code": "EVT-0228 :: 2026-02-28 · 03:00:00",
-      "name": "EE.UU. e Israel atacaron Irán mientras negociaban la paz",
-      "desc": "El 28 de febrero de 2026, EE.UU. e Israel lanzaron ataques aéreos sobre Irán mientras se desarrollaban negociaciones diplomáticas en Ginebra. El día anterior, Omán había confirmado que se alcanzó un acuerdo 'sorprendentemente bueno' y que la paz estaba 'al alcance'. Los ataques mataron al líder supremo Ali Jamenei y cerraron el Estrecho de Ormuz, por donde transita el 20% del petróleo mundial. Más de 2,000 civiles iraníes han muerto. El petróleo llegó a 115 dólares por barril.",
-      "feature": "seguir cobertura en vivo",
-      "link": "https://cnnespanol.cnn.com/2026/04/01/mundo/live-news/guerra-ee-uu-israel-iran-ataques-medio-oriente-vivo-10-trax"
+      "name": "Atacaron Irán el día después de que la paz estaba 'al alcance'",
+      "desc": "El 27 de febrero, Omán confirmó un acuerdo diplomático histórico. Iran aceptó no enriquecer uranio y permitir inspecciones totales. Las partes acordaron continuar negociaciones el 2 de marzo en Viena. Al día siguiente, EE.UU. e Israel bombardearon Irán. Mataron al líder supremo Jamenei. El canciller omaní dijo estar 'consternado'. El enviado de Trump que negoció el acuerdo, Steve Witkoff, nunca explicó públicamente por qué.",
+      "feature": "ver cronología del conflicto",
+      "link": "https://es.wikipedia.org/wiki/Guerra_de_Estados_Unidos_e_Israel_contra_Ir%C3%A1n"
     },
     {
       "type": "rumor",
-      "code": "RMR-0401 :: 2026-04-01 · 21:00:00",
-      "name": "Irán lanzó su mayor ataque de misiles — la noche que Trump hablaría a la nación",
-      "desc": "Este miércoles, mientras Trump preparaba un discurso nacional sobre el 'gran trabajo' que ha hecho en la guerra, Irán disparó 10 misiles hacia Israel: el mayor ataque desde el inicio del conflicto. Las sirenas antiaéreas sonaron en Tel Aviv durante más de media hora. Irán también rechazó públicamente haber pedido un alto al fuego, contradiciendo declaraciones de Trump. El canciller iraní fue directo: 'La guerra continuará hasta que el agresor sea castigado'.",
-      "feature": "ver reporte de Infobae",
-      "link": "https://www.infobae.com/america/mundo/2026/04/01/el-ejercito-de-israel-confirmo-que-iran-realizo-el-mayor-lanzamiento-de-misiles-desde-que-empezo-la-guerra/"
+      "code": "RMR-0406 :: 2026-04-06 · 18:00:00",
+      "name": "Trump amenazó con 'destruir toda una civilización' — luego dijo que no quería que pasara",
+      "desc": "En Truth Social, Trump publicó: 'El martes será el Día de la Central Eléctrica y el Día del Puente. ¡Abran el maldito estrecho o vivirán en el infierno!' Después amenazó con que 'toda una civilización morirá esta noche para no volver jamás'. Horas después aclaró: 'No quiero que eso suceda, pero probablemente sucederá'. La embajada de Irán en Sudáfrica respondió pidiendo aplicar la Enmienda 25. El senador Bernie Sanders lo llamó 'individuo peligroso y mentalmente desequilibrado'.",
+      "feature": "leer análisis de CNN",
+      "link": "https://cnnespanol.cnn.com/2026/04/08/mundo/dia-borde-abismo-iran-guerra-taco-trump-trax"
     },
     {
       "type": "system",
-      "code": "SYS-0312 :: 2026-03-01 · 10:00:00",
-      "name": "El celular de 2026 ya no responde preguntas — toma decisiones",
-      "desc": "Los smartphones de gama alta de 2026 integran agentes de IA directamente en el chip, sin conexión a la nube. El Snapdragon 8 Elite Gen 5 ejecuta modelos completos en el dispositivo, con un 40% menos de consumo energético. El Honor Robot Phone presentado en el MWC fue el primero en combinar IA conversacional con control de hardware físico. La carrera ya no es de megapíxeles: es de quién tiene la NPU más capaz.",
-      "feature": "ver lanzamientos MWC 2026",
-      "link": "https://www.infobae.com/tecno/2026/02/28/que-celulares-llegan-en-marzo-de-2026-lanzamientos-confirmados-y-rumores/"
-    },
-    {
-      "type": "random",
-      "code": "GLC-0223 :: 2026-02-23 · 09:00:00",
-      "name": "El trabajo del futuro no lo gana quien sabe más — lo gana quien aprende más rápido",
-      "desc": "McKinsey ya opera con 25,000 agentes de IA junto a 40,000 empleados humanos. Accenture monitorea los inicios de sesión semanales de sus seniors en herramientas de IA. El Foro Económico Mundial proyecta 78 millones de horas semanales liberadas por automatización en 2026. Los nuevos empleos más demandados tienen nombres que no existían hace tres años: Prompt Engineer, Supervisor de Agentes Autónomos, Especialista en Ética de IA. El CEO de Palantir lo resumió sin rodeos: solo tienen futuro los técnicos y los neurodivergentes.",
-      "feature": "leer análisis completo",
-      "link": "https://www.infobae.com/tecno/2026/02/23/inteligencia-artificial-y-trabajo-la-ventaja-que-mas-vale-en-2026-no-la-da-ninguna-empresa-ni-ningun-curso/"
+      "code": "SYS-0401 :: 2026-04-01 · 21:00:00",
+      "name": "Trump declaró victoria. Irán dijo que nadie les pidió un alto al fuego",
+      "desc": "Trump anunció en Truth Social un 'alto el fuego bilateral' 80 minutos antes de su propio plazo para destruir todos los puentes de Irán. Proclamó que Irán aceptó reabrir el Estrecho de Ormuz. El canciller iraní Abbas Araghchi lo desmintió en vivo por Al Jazeera: 'No hemos presentado ninguna propuesta de alto el fuego.' Los mercados subieron con el anuncio. Cuando Irán lo desmintió, volvieron a caer. El Estrecho seguía cerrado.",
+      "feature": "ver cobertura en tiempo real",
+      "link": "https://cnnespanol.cnn.com/2026/04/09/eeuu/acuerdo-iran-estrecho-ormuz-trax"
     },
     {
       "type": "alert",
-      "code": "EVT-0105 :: 2026-01-05 · 08:00:00",
-      "name": "La primera IA entrenada en órbita ya existe — y los teléfonos se conectarán directo a satélites",
-      "desc": "Nvidia y StarCloud completaron el primer entrenamiento de un modelo de IA en el espacio. En paralelo, China ya prueba redes 10G y marcas como Xiaomi y Samsung integran comunicación satelital bidireccional de serie en sus gamas altas 2026. Los analistas de ESADE advierten que el impacto será tan profundo que muchos operadores de telecomunicaciones no sobrevivirán la transición. El espacio se convirtió en la nueva frontera computacional.",
-      "feature": "ver tendencias tecnológicas 2026",
-      "link": "https://dobetter.esade.edu/en/technology-trends-2026"
+      "code": "EVT-0407 :: 2026-04-07 · 10:00:00",
+      "name": "100 expertos en derecho internacional: esta guerra es un crimen de guerra",
+      "desc": "Más de 100 juristas internacionales emitieron una advertencia pública antes de que Trump amenazara infraestructura civil. Cuando amenazó con destruir todas las plantas eléctricas y plantas desalinizadoras de Irán, dos exabogadas militares advirtieron que eso coloca a mandos del Pentágono en 'una situación profundamente riesgosa'. Hasta Marjorie Taylor Greene, ex fanática de Trump, escribió: 'Eso no es hacer a América grande otra vez. Esto es maldad'.",
+      "feature": "leer análisis legal",
+      "link": "https://cnnespanol.cnn.com/2026/04/06/eeuu/amenaza-crimenes-guerra-trump-iran-trax"
+    },
+    {
+      "type": "random",
+      "code": "GLC-0412 :: 2026-04-12 · 06:00:00",
+      "name": "Irán responde al bloqueo naval de Trump: 'Quedarán atrapados en un vórtice mortal'",
+      "desc": "Los Guardianes de la Revolución declararon que el Estrecho de Ormuz está 'bajo control total' de sus fuerzas. Las negociaciones en Islamabad terminaron sin acuerdo: Vance presentó la 'oferta final' de EE.UU., Irán dijo que la contraparte 'no pudo ganarse su confianza'. La aprobación de Trump cayó por debajo del 40%. Sus propios aliados mediáticos — Tucker Carlson, Alex Jones — comenzaron a criticarlo. Trump los atacó públicamente en Truth Social.",
+      "feature": "ver estado actual del conflicto",
+      "link": "https://www.infobae.com/america/mundo/2026/04/12/iran-desafia-el-bloqueo-de-trump-del-estrecho-de-ormuz-el-enemigo-quedara-atrapado-en-un-vortice-mortal/"
     }
   ]
 }
