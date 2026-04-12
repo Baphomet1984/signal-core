@@ -1,4 +1,7 @@
 {
+  "headerImage":    "https://tu-url/imagen.jpg",
+  "headerImageLabel": "TEXTO OPCIONAL DEL LABEL",
+
   "bugs": [
     {
       "type": "alert",
